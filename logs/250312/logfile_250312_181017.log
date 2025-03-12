@@ -1,0 +1,17 @@
+2025-03-12 18:11:03.858993 - rocketbot - INFO - request: facturacion : line 6.2.1.4 - rpadatatransform : getElement  id: fbd66a3f-2587-b8c8-947d-1f66dfbdabc7 -  - {"array_":"{last_status}","position_":"0","var_":"status"}
+2025-03-12 18:11:03.860241 - datatransform - ERROR - EXCEPTION IN (<string> datatransform, L_187 ""): SyntaxError: invalid syntax (<string>, line 0)
+2025-03-12 18:11:43.470613 - rocketbot - INFO - request: facturacion : line 6.2.1.6 - rpadatatransform : getElement  id: 5f663223-dec4-93d5-b674-498edf38b7e4 -  - {"array_":"{last_status}","position_":"1","var_":"message"}
+2025-03-12 18:11:43.472634 - datatransform - ERROR - EXCEPTION IN (<string> datatransform, L_187 ""): SyntaxError: invalid syntax (<string>, line 0)
+2025-03-12 18:11:49.290556 - rocketbot - INFO - request: facturacion : line 6.2.1.6 - rpadatatransform : getElement  id: 5f663223-dec4-93d5-b674-498edf38b7e4 -  - {"array_":"{last_status}","position_":"1","var_":"message"}
+2025-03-12 18:11:49.291553 - datatransform - ERROR - EXCEPTION IN (<string> datatransform, L_187 ""): SyntaxError: invalid syntax (<string>, line 0)
+2025-03-12 18:11:52.711567 - rocketbot - INFO - request: facturacion : line 6.2.1.6 - rpadatatransform : getElement  id: 5f663223-dec4-93d5-b674-498edf38b7e4 -  - {"array_":"{last_status}","position_":"1","var_":"message"}
+2025-03-12 18:11:52.712563 - datatransform - ERROR - EXCEPTION IN (<string> datatransform, L_187 ""): SyntaxError: invalid syntax (<string>, line 0)
+2025-03-12 18:11:53.541259 - rocketbot - INFO - request: facturacion : line 6.2.1.6 - rpadatatransform : getElement  id: 5f663223-dec4-93d5-b674-498edf38b7e4 -  - {"array_":"{last_status}","position_":"1","var_":"message"}
+2025-03-12 18:11:53.542765 - datatransform - ERROR - EXCEPTION IN (<string> datatransform, L_187 ""): SyntaxError: invalid syntax (<string>, line 0)
+2025-03-12 18:11:54.260649 - rocketbot - INFO - request: facturacion : line 6.2.1.6 - rpadatatransform : getElement  id: 5f663223-dec4-93d5-b674-498edf38b7e4 -  - {"array_":"{last_status}","position_":"1","var_":"message"}
+2025-03-12 18:11:54.261646 - datatransform - ERROR - EXCEPTION IN (<string> datatransform, L_187 ""): SyntaxError: invalid syntax (<string>, line 0)
+2025-03-12 18:11:56.542881 - rocketbot - INFO - request: facturacion : line 6.2.1.6 - rpadatatransform : getElement  id: 5f663223-dec4-93d5-b674-498edf38b7e4 -  - {"array_":"{last_status}","position_":"1","var_":"message"}
+2025-03-12 18:11:56.543985 - datatransform - ERROR - EXCEPTION IN (<string> datatransform, L_187 ""): SyntaxError: invalid syntax (<string>, line 0)
+2025-03-12 18:12:08.751516 - rocketbot - INFO - request: facturacion : line 6.2.1.4 - rpadatatransform : getElement  id: bd02d77b-1b4d-6aab-0ec4-9bdf1e1e30cb -  - {"array_":"{last_status}","position_":"'status'","var_":"status"}
+2025-03-12 18:12:08.753524 - datatransform - ERROR - EXCEPTION IN (<string> datatransform, L_186 ""): ValueError: invalid literal for int() with base 10: "'status'"
+2025-03-12 18:12:49.539547 - rocketbot - INFO - request: facturacion : line 6.2.1.4 - rpafile : savedatafile  id: ba3d0bd4-78ce-fe97-251a-82afa4d93f8e -  - {"file_name":"{path_log}","type":"add","new_line":true,"file_data":"{status}"}
