@@ -170,3 +170,67 @@
 2025-03-12 14:57:32.283426 - rocketbot - INFO - request: facturacion : line 8 - rpasystem : setVar  id: 4f6e0ef8-06da-2948-a5b8-ff5a0cb5f383 -  - {sheets[1:]}
 2025-03-12 14:57:32.285335 - system - ERROR - EXCEPTION IN (<string> system, L_253 ""): NameError: name 'sheets' is not defined
 2025-03-12 14:57:50.236310 - rocketbot - INFO - request: facturacion : line 8 - rpasystem : setVar  id: 4f6e0ef8-06da-2948-a5b8-ff5a0cb5f383 -  - {sheets}[1:]
+2025-03-12 14:59:38.243520 - rocketbot - INFO - request: facturacion : line 8 - rpasystem : setVar  id: 4f6e0ef8-06da-2948-a5b8-ff5a0cb5f383 -  - {sheets}[1:3]
+2025-03-12 14:59:47.246232 - rocketbot - INFO - request: facturacion : line 1 - rpascripts : module  id: 797dffcd-ff36-2b65-6f28-7665b967d31f -  - {"module_name":"killApp","module":"killApp","app_":"Excel"}
+2025-03-12 14:59:47.509462 - rocketbot - INFO - request: facturacion : line 4 - rpalogic : group  id: 3df269a5-7397-ed44-009d-78bb47b9ebb7 -  - 
+2025-03-12 14:59:47.586066 - rocketbot - INFO - request: facturacion : line 4.1 - rpascripts : module  id: e0dbbf0b-6094-af95-b406-a3c648160904 -  - {"module_name":"ControlIni","module":"leerIni","content":"C:/Users/Ignacio/OneDrive/Documents/git-and-github/RobotClase2/main/resources/config_bot2.ini","variable":"{config}"}
+2025-03-12 14:59:47.818925 - rocketbot - INFO - request: facturacion : line 4.2 - rpascripts : module  id: 868321ca-2fbe-9233-8837-73d7127be913 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_git","idvar":"path_git"}
+2025-03-12 14:59:47.912210 - rocketbot - INFO - request: facturacion : line 4.3 - rpascripts : module  id: 2077a0b2-2b6a-bbe4-9bfe-a94e100d71d5 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_log","idvar":"path_log"}
+2025-03-12 14:59:48.145890 - rocketbot - INFO - request: facturacion : line 4.4 - rpascripts : module  id: 5d3b6e14-efcf-56ee-e353-eb1c0af87089 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_archivo","idvar":"path_archivo"}
+2025-03-12 14:59:48.220045 - rocketbot - INFO - request: facturacion : line 4.5 - rpascripts : module  id: 1020d70f-6d9d-6d91-cc38-7d207184a7c9 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"resp_inscr","idvar":"resp_inscr"}
+2025-03-12 14:59:48.499093 - rocketbot - INFO - request: facturacion : line 4.6 - rpascripts : module  id: 27739039-13c0-cab5-b4d5-4671c0c222be -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"resp_mono","idvar":"resp_mono"}
+2025-03-12 14:59:48.624057 - rocketbot - INFO - request: facturacion : line 4.7 - rpascripts : module  id: 6b423d7f-695f-3500-8b08-b4dcdc86c1aa -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"suj_exen","idvar":"suj_exen"}
+2025-03-12 14:59:48.839002 - rocketbot - INFO - request: facturacion : line 5 - rpalogic : trycatch  id: a8595513-f577-5d04-ae89-c9a230287598 -  - 
+2025-03-12 14:59:48.946446 - rocketbot - INFO - request: facturacion : line 5.1 - rpaexcel : readxlsx  id: cb144be0-4d12-5857-617d-01948ab0d60f -  - {"file_path":"{path_git}/resources/classificacion_clientes.xlsx"}
+2025-03-12 14:59:48.947549 - Rocketbot - ERROR - EXCEPTION IN (<string> Rocketbot, L_192 ""): Exception: File not exists
+2025-03-12 14:59:49.151422 - rocketbot - INFO - request: facturacion : line 5.1 - rpaexcel : readxlsx  id: 39ff8897-a471-6150-ea6d-73cfb14fbb4d -  - {"file_path":"{path_archivo}"}
+2025-03-12 14:59:51.471708 - rocketbot - INFO - request: facturacion : line 5.2 - rpaexcel : savexlsx  id: be49d7f9-6bbc-456f-81b9-ec29486883a6 -  - {path_git}/resources/clasificacion_clientes.xlsx
+2025-03-12 14:59:51.903032 - rocketbot - INFO - request: facturacion : line 5.3 - rpaexcel : quitexcel  id: 573fd24b-3d4e-c8c2-d159-46806bf39a2b -  - 
+2025-03-12 14:59:52.153611 - rocketbot - INFO - request: facturacion : line 5.4 - rpaexcel : readxlsx  id: f669e23b-d3e8-6e59-1305-a1055c69fe23 -  - {"file_path":"{path_git}/resources/clasificacion_clientes.xlsx"}
+2025-03-12 14:59:54.472447 - rocketbot - INFO - request: facturacion : line 6 - rpalogic : evaluateIf  id: cd017491-7d63-c368-789e-9658fe77a10f -  - {respuesta}
+2025-03-12 14:59:54.861999 - rocketbot - INFO - request: facturacion : line 6.1 - rpascripts : module  id: ab46f2a5-bc61-71e9-6b7e-4ea1077022c1 -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{resp_inscr}"}
+2025-03-12 14:59:55.127785 - rocketbot - INFO - request: facturacion : line 6.2 - rpascripts : module  id: 144a62b7-7ed6-2015-00e6-5dedd709f6df -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{resp_mono}"}
+2025-03-12 14:59:55.235977 - rocketbot - INFO - request: facturacion : line 6.3 - rpascripts : module  id: 4d5531c6-04d9-9866-187d-71c1d051588a -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{suj_exen}"}
+2025-03-12 14:59:55.499302 - rocketbot - INFO - request: facturacion : line 7 - rpaexcel : getsheets  id: 6bf490f4-7ed7-f3aa-51b6-735a221420fb -  - sheets
+2025-03-12 14:59:55.607740 - rocketbot - INFO - request: facturacion : line 8 - rpasystem : setVar  id: 4f6e0ef8-06da-2948-a5b8-ff5a0cb5f383 -  - {sheets}[1:3]
+2025-03-12 14:59:55.826639 - rocketbot - INFO - request: facturacion : line 9 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":0}
+2025-03-12 14:59:55.829238 - rocketbot - INFO - For count: 1
+2025-03-12 14:59:55.935476 - rocketbot - INFO - request: facturacion : line 9.1 - rpalogic : evaluateIf  id: 0332bf0a-71ed-88d7-4568-c456f0609a80 -  - {current_sheet} == "Planilla de Facturacion"
+2025-03-12 14:59:55.936567 - Rocketbot - ERROR - EXCEPTION IN (<string> Rocketbot, L_69 ""): SyntaxError: expected 'else' after 'if' expression (<string>, line 1)
+2025-03-12 15:00:24.978869 - rocketbot - INFO - request: facturacion : line 9 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":0}
+2025-03-12 15:00:24.980865 - rocketbot - INFO - For count: 1
+2025-03-12 15:00:25.314352 - rocketbot - INFO - request: facturacion : line 9.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"\"Responsable Inscripto\"","cell_range2":"A1:N3","option":"all_using_source_theme"}
+2025-03-12 15:00:25.337056 - Rocketbot - ERROR - EXCEPTION IN (<string> Rocketbot, L_597 ""): Exception: The name "Responsable Inscripto" does not exist in the book
+2025-03-12 15:00:25.339160 - script - ERROR - EXCEPTION IN (<string> script, L_185 ""): Exception: The name "Responsable Inscripto" does not exist in the book
+2025-03-12 15:00:25.580094 - rocketbot - INFO - request: facturacion : line 9 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":1}
+2025-03-12 15:00:25.581418 - rocketbot - INFO - For count: 2
+2025-03-12 15:00:25.653528 - rocketbot - INFO - request: facturacion : line 9.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"\"Responsable Inscripto\"","cell_range2":"A1:N3","option":"all_using_source_theme"}
+2025-03-12 15:00:25.676925 - Rocketbot - ERROR - EXCEPTION IN (<string> Rocketbot, L_597 ""): Exception: The name "Responsable Inscripto" does not exist in the book
+2025-03-12 15:00:25.678981 - script - ERROR - EXCEPTION IN (<string> script, L_185 ""): Exception: The name "Responsable Inscripto" does not exist in the book
+2025-03-12 15:00:25.900195 - rocketbot - INFO - request: facturacion : line 9 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":2}
+2025-03-12 15:00:25.901214 - rocketbot - INFO - For count: 2
+2025-03-12 15:01:10.154375 - rocketbot - INFO - request: facturacion : line 9 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":0}
+2025-03-12 15:01:10.155693 - rocketbot - INFO - For count: 1
+2025-03-12 15:01:10.485250 - rocketbot - INFO - request: facturacion : line 9.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-12 15:01:10.748985 - rocketbot - INFO - request: facturacion : line 9 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":1}
+2025-03-12 15:01:10.750161 - rocketbot - INFO - For count: 2
+2025-03-12 15:01:10.888295 - rocketbot - INFO - request: facturacion : line 9.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-12 15:01:11.074943 - rocketbot - INFO - request: facturacion : line 9 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":2}
+2025-03-12 15:01:11.076023 - rocketbot - INFO - For count: 2
+2025-03-12 15:02:29.505630 - rocketbot - INFO - request: facturacion : line 6.3 - rpascripts : module  id: 4d5531c6-04d9-9866-187d-71c1d051588a -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{suj_exen}"}
+2025-03-12 15:02:29.531680 - Rocketbot - ERROR - EXCEPTION IN (<string> Rocketbot, L_800 ""): ValueError: Sheet named 'Sujeto Exento' already present in workbook
+2025-03-12 15:02:29.534089 - script - ERROR - EXCEPTION IN (<string> script, L_185 ""): ValueError: Sheet named 'Sujeto Exento' already present in workbook
+2025-03-12 15:02:38.479575 - rocketbot - INFO - request: facturacion : line 7 - rpaexcel : getsheets  id: 6bf490f4-7ed7-f3aa-51b6-735a221420fb -  - sheets
+2025-03-12 15:02:53.881984 - rocketbot - INFO - request: facturacion : line 8 - rpasystem : setVar  id: 4f6e0ef8-06da-2948-a5b8-ff5a0cb5f383 -  - {sheets}[1:4]
+2025-03-12 15:03:02.700546 - rocketbot - INFO - request: facturacion : line 9 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":0}
+2025-03-12 15:03:02.702559 - rocketbot - INFO - For count: 1
+2025-03-12 15:03:03.031481 - rocketbot - INFO - request: facturacion : line 9.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-12 15:03:03.297719 - rocketbot - INFO - request: facturacion : line 9 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":1}
+2025-03-12 15:03:03.298729 - rocketbot - INFO - For count: 2
+2025-03-12 15:03:03.419924 - rocketbot - INFO - request: facturacion : line 9.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-12 15:03:03.607685 - rocketbot - INFO - request: facturacion : line 9 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":2}
+2025-03-12 15:03:03.608769 - rocketbot - INFO - For count: 3
+2025-03-12 15:03:03.811010 - rocketbot - INFO - request: facturacion : line 9.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-12 15:03:03.930863 - rocketbot - INFO - request: facturacion : line 9 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":3}
+2025-03-12 15:03:03.931887 - rocketbot - INFO - For count: 3
+2025-03-12 15:03:36.002851 - rocketbot - INFO - request: facturacion : line 9.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
