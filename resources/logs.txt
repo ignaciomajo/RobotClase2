@@ -1,5 +1,0 @@
-inicio:2025-03-12 12:43:46.384056
-status: {'status': 'True', 'message': 'alert  stop', 'img': '', 'vars': [], 'ifs': [], 'extra': [], 'time': '0.6579818725585938'}
-fin: 2025-03-12 12:43:58.562152inicio:2025-03-12 13:27:24.073279
-status: {'status': 'True', 'message': 'alert  stop', 'img': '', 'vars': [], 'ifs': [], 'extra': [], 'time': '13.891868114471436'}
-fin: 2025-03-12 13:27:53.548178
