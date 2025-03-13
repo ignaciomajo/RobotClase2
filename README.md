@@ -103,7 +103,7 @@ Esto nos dirigirá a la siguiente instancia:
 
 Esta es la pantalla inicial una vez ingresamos al menú del robot. Para ejecutarlo, solo debemos presionar el botón marcado en un recuadro rojo que dice **Run**. Este ejecutará el robot con las variables predeterminadas.
 
-A su vez, podemos visualizar las disintas agrupaciones de comandos encerradas en un recuadro azul. Esto puede considerarse como "bloques" que generalizan las acciones ejecutadas por el robot en cada uno de ellos y su orden. Esto nos permite entender la lógica que sigue el robot y ofrece un facilidad para su lectura.
+A su vez, podemos visualizar las disintas agrupaciones de comandos encerradas en un recuadro azul. Esto puede considerarse como "bloques" que generalizan las acciones ejecutadas por el robot en cada uno de ellos y su orden. Esto nos permite entender la lógica que sigue el robot y ofrece facilidad para su lectura.
 
 Cuando existen pasos dentro de otro, vemos como se produce una pequeña indentación en el panel, y el contador empieza desde el número 1 nuevamente, esto nos dice que dichos pasos, son *hijos* de un paso *padre*. Esto es de suma importancia para poder entender como el robot ejecuta cada actividad.
 
