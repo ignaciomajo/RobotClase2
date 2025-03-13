@@ -86,4 +86,73 @@ Este es el archivo sobre el cual el robot estará trabajando inicialmente. Debe 
 
 #### Ahora veremos la ejecución dentro de Rocketbot Studio 🚀
 
+Una vez abierto Rocketbot Studio:
 
+![upload_db](https://github.com/user-attachments/assets/c0b82aab-74c6-4e61-954c-aa13e1a1fb35)
+
+
+Presionamos en la casilla marcada con un recuadro rojo, y cargamos el archivo `robot.db` mencionado anteriormente.
+
+Al seleccionar el proyecto, se abrirá la siguiente pantalla donde figuran todos los robots dentro de la base de datos cargada, aquí deberemos seleccionar **Facturacion**.
+
+![robots_db](https://github.com/user-attachments/assets/8f4acb1f-9488-470d-9987-8ce7e57b4311)
+
+Esto nos dirigirá a la siguiente instancia:
+
+![pantalla_inicial](https://github.com/user-attachments/assets/01d2eaca-4692-434d-ba01-432fcb8bd08a)
+
+Esta es la pantalla inicial una vez ingresamos al menú del robot. Para ejecutarlo, solo debemos presionar el botón marcado en un recuadro rojo que dice **Run**. Este ejecutará el robot con las variables predeterminadas.
+
+A su vez, podemos visualizar las disintas agrupaciones de comandos encerradas en un recuadro azul. Esto puede considerarse como "bloques" que generalizan las acciones ejecutadas por el robot en cada uno de ellos y su orden. Esto nos permite entender la lógica que sigue el robot y ofrece un facilidad para su lectura.
+
+Cuando existen pasos dentro de otro, vemos como se produce una pequeña indentación en el panel, y el contador empieza desde el número 1 nuevamente, esto nos dice que dichos pasos, son *hijos* de un paso *padre*. Esto es de suma importancia para poder entender como el robot ejecuta cada actividad.
+
+En este caso, el robot está diseñado para separar registros de una planilla de `Excel` según el valor de una columna *(Condición de IVA)* y generar una hoja dentro del archivo para cada una de las clasificaciones existentes.
+
+![planilla_inicial](https://github.com/user-attachments/assets/e53d9383-eb00-4ac3-9ef1-f8148df87da5)
+
+Y copiará el encabezado y los formatos de celda en cada hoja creada:
+
+![encabezados](https://github.com/user-attachments/assets/8c1953f9-925f-47fd-95de-374e2caae1d4)
+
+Una vez realizado esto, el robot irá leyendo registro por registro, obteniendo el valor correspondiente a la columna mencionada anteriormente, y llevará dicho registro a la hoja que corresponda a dicha clasificación, como se puede ver en el siguiente ejemplo:
+
+![clasificacion](https://github.com/user-attachments/assets/94fa941e-daf2-43ad-8b6f-9c606855a7c1)
+
+Cuando el proceso agrupado en `Data Manipulation` haya terminado, se eliminará la hoja inicial (ya que esta la tenemos en un archivo separado, el cual fue utilizado para comenzar a trabajar) y solo conservará las hojas resultantes con los clientes clasificados en su correspondiente hoja de acuerdo a la columna seleccionada.
+
+![eliminacion_hoja](https://github.com/user-attachments/assets/24d5ba42-09f9-47f0-a7f0-1fa056913ab7)
+
+Finalmente, como se mencionó anteriormente, podremos ver el archivo resultante *(output)* en la carpeta `resources` 📁 con el nombre de `clasificacion_clientes.xlsx` 📊
+
+## 4. Tecnologías utilizadas 🛠️
+
+* `Rocketbot Studio (v.2025.01.06)`
+* `Git and GitHub`
+* `Microsoft Excel` (requerido para ejecutar el robot)
+* `Python`
+* ``
+
+## 5. Colaboradores del proyecto 🏗️
+
+Quiero agradecer a:
+
+![BotSolutions](https://github.com/user-attachments/assets/4dda0262-5b97-4b60-a692-db5aa7825d4b)
+
+#### BotSolutions
+
+Por la capacitación en la herramienta y en la oportunidad de aprender de la mano de ellos.
+
+------------------------------------------------------------------------------------------------------
+![Rocketbot](https://github.com/user-attachments/assets/5e61e12c-8fe3-4505-8463-0cf648ecda96)
+
+#### Rocketbot
+
+Por desarrollar la herramienta y proveer cursos gratuitos para aprender a utilizarla.
+
+
+## 6. Desarrollador del proyecto 👷
+
+![imagen-readme](https://github.com/user-attachments/assets/133bc743-0424-4120-a7a6-7245d2f28f8c)
+
+**| Ignacio Majo | Data Scientist Junior | Junior RPA Developer |**
