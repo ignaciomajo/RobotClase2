@@ -131,7 +131,6 @@ Finalmente, como se mencionó anteriormente, podremos ver el archivo resultante 
 * `Git and GitHub`
 * `Microsoft Excel` (requerido para ejecutar el robot)
 * `Python`
-* ``
 
 ## 5. Colaboradores del proyecto 🏗️
 
