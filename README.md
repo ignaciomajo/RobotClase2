@@ -111,7 +111,9 @@ En este caso, el robot está diseñado para separar registros de una planilla de
 
 ![planilla_inicial](https://github.com/user-attachments/assets/e53d9383-eb00-4ac3-9ef1-f8148df87da5)
 
-Y copiará el encabezado y los formatos de celda en cada hoja creada:
+El robot toma las variables definidas en la sección `[clasificacion_clientes]` del archivo `config.ini` 🔧, y crea una hoja para cada una de ellas.
+
+Luego, copiará el encabezado de la página principal y los formatos de celda en cada hoja creada:
 
 ![encabezados](https://github.com/user-attachments/assets/8c1953f9-925f-47fd-95de-374e2caae1d4)
 
