@@ -1,3 +1,3 @@
-# Rocketbot - Clasificación de clientes
+# Rocketbot :rocket: - Clasificación de clientes
 
-![rpa_excel](https://github.com/user-attachments/assets/08629f82-7965-4fef-837f-297232055b1f)
+![rpa_excel](https://github.com/user-attachments/assets/c3b66107-ca77-4e0d-a534-f27053b96409)
