@@ -15,3 +15,755 @@
 2025-03-12 18:12:08.751516 - rocketbot - INFO - request: facturacion : line 6.2.1.4 - rpadatatransform : getElement  id: bd02d77b-1b4d-6aab-0ec4-9bdf1e1e30cb -  - {"array_":"{last_status}","position_":"'status'","var_":"status"}
 2025-03-12 18:12:08.753524 - datatransform - ERROR - EXCEPTION IN (<string> datatransform, L_186 ""): ValueError: invalid literal for int() with base 10: "'status'"
 2025-03-12 18:12:49.539547 - rocketbot - INFO - request: facturacion : line 6.2.1.4 - rpafile : savedatafile  id: ba3d0bd4-78ce-fe97-251a-82afa4d93f8e -  - {"file_name":"{path_log}","type":"add","new_line":true,"file_data":"{status}"}
+2025-03-12 18:24:26.710859 - rocketbot - INFO - request: facturacion : line 1 - rpalogic : group  id: d4a103af-91eb-53b4-45ea-3e30a52b61c8 -  - 
+2025-03-12 18:24:26.959872 - rocketbot - INFO - request: facturacion : line 1.1 - rpascripts : module  id: 797dffcd-ff36-2b65-6f28-7665b967d31f -  - {"module_name":"killApp","module":"killApp","app_":"Excel"}
+2025-03-12 18:24:27.020600 - rocketbot - INFO - request: facturacion : line 1.2 - rpasystem : setVar  id: 26c3a7c2-a094-0bdb-a87c-23b30acffb56 -  - datetime.now()
+2025-03-12 18:24:27.284361 - rocketbot - INFO - request: facturacion : line 1.3 - rpafile : savedatafile  id: 71fa4eb5-4b9c-8272-f54a-b992c56ad17a -  - {"file_name":"{path_log}","type":"add","new_line":true,"file_data":"{fecha_inicio}"}
+2025-03-12 18:24:27.395588 - rocketbot - INFO - request: facturacion : line 2 - rpalogic : group  id: 3df269a5-7397-ed44-009d-78bb47b9ebb7 -  - 
+2025-03-12 18:24:27.599210 - rocketbot - INFO - request: facturacion : line 2.1 - rpascripts : module  id: e0dbbf0b-6094-af95-b406-a3c648160904 -  - {"module_name":"ControlIni","module":"leerIni","content":"C:/Users/Ignacio/OneDrive/Documents/git-and-github/RobotClase2/main/resources/config_bot2.ini","variable":"{config}"}
+2025-03-12 18:24:27.716773 - rocketbot - INFO - request: facturacion : line 2.2 - rpascripts : module  id: 868321ca-2fbe-9233-8837-73d7127be913 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_git","idvar":"path_git"}
+2025-03-12 18:24:27.920517 - rocketbot - INFO - request: facturacion : line 2.3 - rpascripts : module  id: 2077a0b2-2b6a-bbe4-9bfe-a94e100d71d5 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_log","idvar":"path_log"}
+2025-03-12 18:24:28.028570 - rocketbot - INFO - request: facturacion : line 2.4 - rpascripts : module  id: 5d3b6e14-efcf-56ee-e353-eb1c0af87089 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_archivo","idvar":"path_archivo"}
+2025-03-12 18:24:28.247257 - rocketbot - INFO - request: facturacion : line 2.5 - rpascripts : module  id: 1020d70f-6d9d-6d91-cc38-7d207184a7c9 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"resp_inscr","idvar":"resp_inscr"}
+2025-03-12 18:24:28.339441 - rocketbot - INFO - request: facturacion : line 2.6 - rpascripts : module  id: 27739039-13c0-cab5-b4d5-4671c0c222be -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"resp_mono","idvar":"resp_mono"}
+2025-03-12 18:24:28.575378 - rocketbot - INFO - request: facturacion : line 2.7 - rpascripts : module  id: 6b423d7f-695f-3500-8b08-b4dcdc86c1aa -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"suj_exen","idvar":"suj_exen"}
+2025-03-12 18:24:28.664665 - rocketbot - INFO - request: facturacion : line 3 - rpalogic : group  id: df5cae10-f914-9b03-cc16-24c3df91ed5b -  - 
+2025-03-12 18:24:28.895229 - rocketbot - INFO - request: facturacion : line 3.1 - rpalogic : trycatch  id: a8595513-f577-5d04-ae89-c9a230287598 -  - 
+2025-03-12 18:24:28.990206 - rocketbot - INFO - request: facturacion : line 3.1.1 - rpaexcel : readxlsx  id: cb144be0-4d12-5857-617d-01948ab0d60f -  - {"file_path":"{path_git}/resources/classificacion_clientes.xlsx"}
+2025-03-12 18:24:28.992626 - Rocketbot - ERROR - EXCEPTION IN (<string> Rocketbot, L_192 ""): Exception: File not exists
+2025-03-12 18:24:29.209067 - rocketbot - INFO - request: facturacion : line 3.1.1 - rpaexcel : readxlsx  id: 39ff8897-a471-6150-ea6d-73cfb14fbb4d -  - {"file_path":"{path_archivo}"}
+2025-03-12 18:24:31.708687 - rocketbot - INFO - request: facturacion : line 3.1.2 - rpaexcel : savexlsx  id: be49d7f9-6bbc-456f-81b9-ec29486883a6 -  - {path_git}/resources/clasificacion_clientes.xlsx
+2025-03-12 18:24:32.154951 - rocketbot - INFO - request: facturacion : line 3.1.3 - rpaexcel : quitexcel  id: 573fd24b-3d4e-c8c2-d159-46806bf39a2b -  - 
+2025-03-12 18:24:32.414866 - rocketbot - INFO - request: facturacion : line 3.1.4 - rpaexcel : readxlsx  id: f669e23b-d3e8-6e59-1305-a1055c69fe23 -  - {"file_path":"{path_git}/resources/clasificacion_clientes.xlsx"}
+2025-03-12 18:24:34.744475 - rocketbot - INFO - request: facturacion : line 3.2 - rpalogic : evaluateIf  id: cd017491-7d63-c368-789e-9658fe77a10f -  - {respuesta}
+2025-03-12 18:24:35.157761 - rocketbot - INFO - request: facturacion : line 3.2.1 - rpascripts : module  id: ab46f2a5-bc61-71e9-6b7e-4ea1077022c1 -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{resp_inscr}"}
+2025-03-12 18:24:35.422138 - rocketbot - INFO - request: facturacion : line 3.2.2 - rpascripts : module  id: 144a62b7-7ed6-2015-00e6-5dedd709f6df -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{resp_mono}"}
+2025-03-12 18:24:35.547113 - rocketbot - INFO - request: facturacion : line 3.2.3 - rpascripts : module  id: 4d5531c6-04d9-9866-187d-71c1d051588a -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{suj_exen}"}
+2025-03-12 18:24:35.795918 - rocketbot - INFO - request: facturacion : line 3.3 - rpaexcel : getsheets  id: 6bf490f4-7ed7-f3aa-51b6-735a221420fb -  - sheets
+2025-03-12 18:24:35.903247 - rocketbot - INFO - request: facturacion : line 3.4 - rpasystem : setVar  id: 4f6e0ef8-06da-2948-a5b8-ff5a0cb5f383 -  - {sheets}[1:4]
+2025-03-12 18:24:36.122031 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":0}
+2025-03-12 18:24:36.122644 - rocketbot - INFO - For count: 1
+2025-03-12 18:24:36.211745 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-12 18:24:36.447678 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-12 18:24:36.614156 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":1}
+2025-03-12 18:24:36.615153 - rocketbot - INFO - For count: 2
+2025-03-12 18:24:36.862129 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-12 18:24:36.963557 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-12 18:24:37.396279 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":2}
+2025-03-12 18:24:37.397413 - rocketbot - INFO - For count: 3
+2025-03-12 18:24:37.654985 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-12 18:24:37.734244 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-12 18:24:38.148485 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":3}
+2025-03-12 18:24:38.149924 - rocketbot - INFO - For count: 3
+2025-03-12 18:24:38.400407 - rocketbot - INFO - request: facturacion : line 4 - rpalogic : group  id: 1a452126-dce8-3210-860f-e72ddb9401cc -  - 
+2025-03-12 18:24:38.460998 - rocketbot - INFO - request: facturacion : line 4.1 - rpasystem : setVar  id: 2d822424-091c-ff74-a719-d57a1b7dfaa2 -  - 4
+2025-03-12 18:24:38.713871 - rocketbot - INFO - request: facturacion : line 4.2 - rpaexcel : getrows  id: 9b608f8a-b2a4-8971-16e2-e54614c23c7b -  - filas
+2025-03-12 18:24:38.773864 - rocketbot - INFO - request: facturacion : line 4.3 - rpascripts : module  id: 687a9730-a67d-db4d-fa0f-ba854a41ba01 -  - {"module_name":"AdvancedExcel","module":"countColumns","sheet":"Planilla de Facturacion","var_":"columnas"}
+2025-03-12 18:24:39.041575 - rocketbot - INFO - request: facturacion : line 4.4 - rpascripts : module  id: 24ee1ce3-4816-bc86-8a2f-003a9e6de15f -  - {"module_name":"AdvancedExcel","module":"ReadCells","sheet":"Planilla de Facturacion","range":"A4:N{filas}","var_":"registros"}
+2025-03-12 18:24:39.132495 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":0}
+2025-03-12 18:24:39.133491 - rocketbot - INFO - For count: 1
+2025-03-12 18:24:39.383330 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-12 18:24:39.475554 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-12 18:24:39.709530 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_inscr}
+2025-03-12 18:24:39.782981 - rocketbot - INFO - request: facturacion : line 4.5.2.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_ri
+2025-03-12 18:24:40.046995 - rocketbot - INFO - request: facturacion : line 4.5.2.3 - rpasystem : setVar  id: e0d5b7c3-2b35-6c46-6f6b-840c0f29f878 -  - {filas_ri} + 1
+2025-03-12 18:24:40.138806 - rocketbot - INFO - request: facturacion : line 4.5.2.4 - rpascripts : module  id: 0c14582b-00a9-be87-adc8-6f7e98760e0e -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_inscr}","cell_range2":"A{filas_ri}:N{filas_ri}","option":"all"}
+2025-03-12 18:24:40.358081 - rocketbot - INFO - request: facturacion : line 4.5.2.5 - rpasystem : setVar  id: a7cfd6a4-ebe8-9c75-6c6b-a1372d48afac -  - {counter} + 1
+2025-03-12 18:24:40.514357 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":1}
+2025-03-12 18:24:40.515455 - rocketbot - INFO - For count: 2
+2025-03-12 18:24:40.683600 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-12 18:24:40.842178 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-12 18:24:41.009370 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_inscr}
+2025-03-12 18:24:41.161836 - rocketbot - INFO - request: facturacion : line 4.5.2.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_ri
+2025-03-12 18:24:41.331108 - rocketbot - INFO - request: facturacion : line 4.5.2.3 - rpasystem : setVar  id: e0d5b7c3-2b35-6c46-6f6b-840c0f29f878 -  - {filas_ri} + 1
+2025-03-12 18:24:41.490221 - rocketbot - INFO - request: facturacion : line 4.5.2.4 - rpascripts : module  id: 0c14582b-00a9-be87-adc8-6f7e98760e0e -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_inscr}","cell_range2":"A{filas_ri}:N{filas_ri}","option":"all"}
+2025-03-12 18:24:41.643442 - rocketbot - INFO - request: facturacion : line 4.5.2.5 - rpasystem : setVar  id: a7cfd6a4-ebe8-9c75-6c6b-a1372d48afac -  - {counter} + 1
+2025-03-12 18:24:41.884245 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":2}
+2025-03-12 18:24:41.885314 - rocketbot - INFO - For count: 3
+2025-03-12 18:24:41.966630 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-12 18:24:42.201358 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-12 18:24:42.298636 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-12 18:24:42.514503 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_mono}
+2025-03-12 18:24:42.617500 - rocketbot - INFO - request: facturacion : line 4.5.2.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_rm
+2025-03-12 18:24:42.850452 - rocketbot - INFO - request: facturacion : line 4.5.2.1.3 - rpasystem : setVar  id: 7d638634-f9ad-d36d-ab35-a578b21d6dee -  - {filas_rm} + 1
+2025-03-12 18:24:42.943622 - rocketbot - INFO - request: facturacion : line 4.5.2.1.4 - rpascripts : module  id: da038b90-86c2-ac9f-d1ff-c9d2ad21c64c -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_mono}","cell_range2":"A{filas_rm}:N{filas_rm}","option":"all"}
+2025-03-12 18:24:43.176462 - rocketbot - INFO - request: facturacion : line 4.5.2.1.5 - rpasystem : setVar  id: 4de8c147-c65e-de06-57c7-8f0bc6eb012d -  - {counter} + 1
+2025-03-12 18:24:43.331314 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":3}
+2025-03-12 18:24:43.332467 - rocketbot - INFO - For count: 4
+2025-03-12 18:24:43.496693 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-12 18:24:43.655692 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-12 18:24:43.814249 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-12 18:24:43.982608 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_mono}
+2025-03-12 18:24:44.135951 - rocketbot - INFO - request: facturacion : line 4.5.2.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_rm
+2025-03-12 18:24:44.308648 - rocketbot - INFO - request: facturacion : line 4.5.2.1.3 - rpasystem : setVar  id: 7d638634-f9ad-d36d-ab35-a578b21d6dee -  - {filas_rm} + 1
+2025-03-12 18:24:44.464167 - rocketbot - INFO - request: facturacion : line 4.5.2.1.4 - rpascripts : module  id: da038b90-86c2-ac9f-d1ff-c9d2ad21c64c -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_mono}","cell_range2":"A{filas_rm}:N{filas_rm}","option":"all"}
+2025-03-12 18:24:44.630699 - rocketbot - INFO - request: facturacion : line 4.5.2.1.5 - rpasystem : setVar  id: 4de8c147-c65e-de06-57c7-8f0bc6eb012d -  - {counter} + 1
+2025-03-12 18:24:44.854246 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":4}
+2025-03-12 18:24:44.855242 - rocketbot - INFO - For count: 5
+2025-03-12 18:24:44.944104 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-12 18:24:45.181293 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-12 18:24:45.255890 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-12 18:24:45.503679 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpalogic : evaluateIf  id: 6147f3bc-f6cd-e29d-24c6-131090f271b7 -  - '{condicion_IVA}' == '{suj_exen}'
+2025-03-12 18:24:45.580769 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.1 - rpaexcel : setsheet  id: a0dcdc38-089b-b7f2-0ff5-c4cfeb1b09a6 -  - {suj_exen}
+2025-03-12 18:24:45.831036 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_se
+2025-03-12 18:24:45.905191 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.3 - rpasystem : setVar  id: 5836f9e1-05ee-fe06-52c4-09673e4d6a05 -  - {filas_se} + 1
+2025-03-12 18:24:46.161030 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.4 - rpascripts : module  id: 15f7b28a-0378-f8d3-b192-4098d96ad602 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{suj_exen}","cell_range2":"A{filas_se}:N{filas_se}","option":"all"}
+2025-03-12 18:24:46.233772 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.5 - rpasystem : setVar  id: a0958ef8-0eb8-be87-f2bd-bd06167d6b56 -  - {counter} + 1
+2025-03-12 18:24:46.550205 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":5}
+2025-03-12 18:24:46.550842 - rocketbot - INFO - For count: 5
+2025-03-12 18:24:46.622443 - rocketbot - INFO - request: facturacion : line 5 - rpascripts : module  id: f35fbec0-0d9e-0977-2219-8f8a487a1f81 -  - {"module_name":"AdvancedExcel","module":"deleteSheet","sheet_name":"Planilla de Facturacion","var_":"respuesta"}
+2025-03-12 18:24:46.869585 - rocketbot - INFO - request: facturacion : line 6 - rpalogic : evaluateIf  id: 0b8754a5-4627-996f-adfd-681eff710a43 -  - {respuesta}
+2025-03-12 18:24:46.992927 - rocketbot - INFO - request: facturacion : line 6.1 - rpaexcel : savexlsx  id: 5104b825-413d-09a1-e404-2c06ed0168fa -  - {path_git}/resources
+2025-03-12 18:24:47.184446 - rocketbot - INFO - request: facturacion : line 6.2 - rpalogic : evaluateIf  id: 6f6433d8-588e-bc92-8ebf-1e5fc1549932 -  - {respuesta}
+2025-03-12 18:24:47.324063 - rocketbot - INFO - request: facturacion : line 6.2.1 - rpalogic : group  id: cde99195-043c-034c-15ad-0212dcefe382 -  - 
+2025-03-12 18:24:47.509946 - rocketbot - INFO - request: facturacion : line 6.2.1.1 - rpasystem : setVar  id: b7c3a6ed-f2cf-2281-6ba1-b7e487de6099 -  - %rocketbot_last_status%
+2025-03-12 18:24:47.510966 - system - ERROR - EXCEPTION IN (<string> system, L_253 ""): NameError: name 'true' is not defined
+2025-03-12 18:26:03.392754 - rocketbot - INFO - request: facturacion : line 6.1 - rpaexcel : savexlsx  id: 5104b825-413d-09a1-e404-2c06ed0168fa -  - {path_git}/resources
+2025-03-12 18:27:13.728741 - rocketbot - INFO - request: facturacion : line 1 - rpalogic : group  id: d4a103af-91eb-53b4-45ea-3e30a52b61c8 -  - 
+2025-03-12 18:27:13.788664 - rocketbot - INFO - request: facturacion : line 1.1 - rpascripts : module  id: 797dffcd-ff36-2b65-6f28-7665b967d31f -  - {"module_name":"killApp","module":"killApp","app_":"Excel"}
+2025-03-12 18:27:14.049649 - rocketbot - INFO - request: facturacion : line 1.2 - rpasystem : setVar  id: 26c3a7c2-a094-0bdb-a87c-23b30acffb56 -  - datetime.now()
+2025-03-12 18:27:14.126649 - rocketbot - INFO - request: facturacion : line 1.3 - rpafile : savedatafile  id: 71fa4eb5-4b9c-8272-f54a-b992c56ad17a -  - {"file_name":"{path_log}","type":"add","new_line":true,"file_data":"{fecha_inicio}"}
+2025-03-12 18:27:14.361675 - rocketbot - INFO - request: facturacion : line 2 - rpalogic : group  id: 3df269a5-7397-ed44-009d-78bb47b9ebb7 -  - 
+2025-03-12 18:27:14.520242 - rocketbot - INFO - request: facturacion : line 2.1 - rpascripts : module  id: e0dbbf0b-6094-af95-b406-a3c648160904 -  - {"module_name":"ControlIni","module":"leerIni","content":"C:/Users/Ignacio/OneDrive/Documents/git-and-github/RobotClase2/main/resources/config_bot2.ini","variable":"{config}"}
+2025-03-12 18:27:14.691473 - rocketbot - INFO - request: facturacion : line 2.2 - rpascripts : module  id: 868321ca-2fbe-9233-8837-73d7127be913 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_git","idvar":"path_git"}
+2025-03-12 18:27:14.846822 - rocketbot - INFO - request: facturacion : line 2.3 - rpascripts : module  id: 2077a0b2-2b6a-bbe4-9bfe-a94e100d71d5 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_log","idvar":"path_log"}
+2025-03-12 18:27:15.006234 - rocketbot - INFO - request: facturacion : line 2.4 - rpascripts : module  id: 5d3b6e14-efcf-56ee-e353-eb1c0af87089 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_archivo","idvar":"path_archivo"}
+2025-03-12 18:27:15.160213 - rocketbot - INFO - request: facturacion : line 2.5 - rpascripts : module  id: 1020d70f-6d9d-6d91-cc38-7d207184a7c9 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"resp_inscr","idvar":"resp_inscr"}
+2025-03-12 18:27:15.332510 - rocketbot - INFO - request: facturacion : line 2.6 - rpascripts : module  id: 27739039-13c0-cab5-b4d5-4671c0c222be -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"resp_mono","idvar":"resp_mono"}
+2025-03-12 18:27:15.489189 - rocketbot - INFO - request: facturacion : line 2.7 - rpascripts : module  id: 6b423d7f-695f-3500-8b08-b4dcdc86c1aa -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"suj_exen","idvar":"suj_exen"}
+2025-03-12 18:27:15.645596 - rocketbot - INFO - request: facturacion : line 3 - rpalogic : group  id: df5cae10-f914-9b03-cc16-24c3df91ed5b -  - 
+2025-03-12 18:27:15.831577 - rocketbot - INFO - request: facturacion : line 3.1 - rpalogic : trycatch  id: a8595513-f577-5d04-ae89-c9a230287598 -  - 
+2025-03-12 18:27:15.973259 - rocketbot - INFO - request: facturacion : line 3.1.1 - rpaexcel : readxlsx  id: cb144be0-4d12-5857-617d-01948ab0d60f -  - {"file_path":"{path_git}/resources/classificacion_clientes.xlsx"}
+2025-03-12 18:27:15.975843 - Rocketbot - ERROR - EXCEPTION IN (<string> Rocketbot, L_192 ""): Exception: File not exists
+2025-03-12 18:27:16.142791 - rocketbot - INFO - request: facturacion : line 3.1.1 - rpaexcel : readxlsx  id: 39ff8897-a471-6150-ea6d-73cfb14fbb4d -  - {"file_path":"{path_archivo}"}
+2025-03-12 18:27:18.448321 - rocketbot - INFO - request: facturacion : line 3.1.2 - rpaexcel : savexlsx  id: be49d7f9-6bbc-456f-81b9-ec29486883a6 -  - {path_git}/resources/clasificacion_clientes.xlsx
+2025-03-12 18:27:18.883435 - rocketbot - INFO - request: facturacion : line 3.1.3 - rpaexcel : quitexcel  id: 573fd24b-3d4e-c8c2-d159-46806bf39a2b -  - 
+2025-03-12 18:27:19.148184 - rocketbot - INFO - request: facturacion : line 3.1.4 - rpaexcel : readxlsx  id: f669e23b-d3e8-6e59-1305-a1055c69fe23 -  - {"file_path":"{path_git}/resources/clasificacion_clientes.xlsx"}
+2025-03-12 18:27:21.490052 - rocketbot - INFO - request: facturacion : line 3.2 - rpalogic : evaluateIf  id: cd017491-7d63-c368-789e-9658fe77a10f -  - {respuesta}
+2025-03-12 18:27:21.910063 - rocketbot - INFO - request: facturacion : line 3.2.1 - rpascripts : module  id: ab46f2a5-bc61-71e9-6b7e-4ea1077022c1 -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{resp_inscr}"}
+2025-03-12 18:27:22.163322 - rocketbot - INFO - request: facturacion : line 3.2.2 - rpascripts : module  id: 144a62b7-7ed6-2015-00e6-5dedd709f6df -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{resp_mono}"}
+2025-03-12 18:27:22.283922 - rocketbot - INFO - request: facturacion : line 3.2.3 - rpascripts : module  id: 4d5531c6-04d9-9866-187d-71c1d051588a -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{suj_exen}"}
+2025-03-12 18:27:22.531314 - rocketbot - INFO - request: facturacion : line 3.3 - rpaexcel : getsheets  id: 6bf490f4-7ed7-f3aa-51b6-735a221420fb -  - sheets
+2025-03-12 18:27:22.657487 - rocketbot - INFO - request: facturacion : line 3.4 - rpasystem : setVar  id: 4f6e0ef8-06da-2948-a5b8-ff5a0cb5f383 -  - {sheets}[1:4]
+2025-03-12 18:27:22.861135 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":0}
+2025-03-12 18:27:22.862665 - rocketbot - INFO - For count: 1
+2025-03-12 18:27:22.971105 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-12 18:27:23.172367 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-12 18:27:23.346142 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":1}
+2025-03-12 18:27:23.346142 - rocketbot - INFO - For count: 2
+2025-03-12 18:27:23.566272 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-12 18:27:23.657825 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-12 18:27:23.955166 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":2}
+2025-03-12 18:27:23.957174 - rocketbot - INFO - For count: 3
+2025-03-12 18:27:24.060129 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-12 18:27:24.279509 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-12 18:27:24.431785 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":3}
+2025-03-12 18:27:24.432897 - rocketbot - INFO - For count: 3
+2025-03-12 18:27:24.682138 - rocketbot - INFO - request: facturacion : line 4 - rpalogic : group  id: 1a452126-dce8-3210-860f-e72ddb9401cc -  - 
+2025-03-12 18:27:24.775713 - rocketbot - INFO - request: facturacion : line 4.1 - rpasystem : setVar  id: 2d822424-091c-ff74-a719-d57a1b7dfaa2 -  - 4
+2025-03-12 18:27:24.994682 - rocketbot - INFO - request: facturacion : line 4.2 - rpaexcel : getrows  id: 9b608f8a-b2a4-8971-16e2-e54614c23c7b -  - filas
+2025-03-12 18:27:25.098998 - rocketbot - INFO - request: facturacion : line 4.3 - rpascripts : module  id: 687a9730-a67d-db4d-fa0f-ba854a41ba01 -  - {"module_name":"AdvancedExcel","module":"countColumns","sheet":"Planilla de Facturacion","var_":"columnas"}
+2025-03-12 18:27:25.319460 - rocketbot - INFO - request: facturacion : line 4.4 - rpascripts : module  id: 24ee1ce3-4816-bc86-8a2f-003a9e6de15f -  - {"module_name":"AdvancedExcel","module":"ReadCells","sheet":"Planilla de Facturacion","range":"A4:N{filas}","var_":"registros"}
+2025-03-12 18:27:25.443164 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":0}
+2025-03-12 18:27:25.444221 - rocketbot - INFO - For count: 1
+2025-03-12 18:27:25.661239 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-12 18:27:25.756197 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-12 18:27:25.986651 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_inscr}
+2025-03-12 18:27:26.077453 - rocketbot - INFO - request: facturacion : line 4.5.2.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_ri
+2025-03-12 18:27:26.325446 - rocketbot - INFO - request: facturacion : line 4.5.2.3 - rpasystem : setVar  id: e0d5b7c3-2b35-6c46-6f6b-840c0f29f878 -  - {filas_ri} + 1
+2025-03-12 18:27:26.400446 - rocketbot - INFO - request: facturacion : line 4.5.2.4 - rpascripts : module  id: 0c14582b-00a9-be87-adc8-6f7e98760e0e -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_inscr}","cell_range2":"A{filas_ri}:N{filas_ri}","option":"all"}
+2025-03-12 18:27:26.649036 - rocketbot - INFO - request: facturacion : line 4.5.2.5 - rpasystem : setVar  id: a7cfd6a4-ebe8-9c75-6c6b-a1372d48afac -  - {counter} + 1
+2025-03-12 18:27:26.773841 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":1}
+2025-03-12 18:27:26.774914 - rocketbot - INFO - For count: 2
+2025-03-12 18:27:26.961831 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-12 18:27:27.097771 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-12 18:27:27.280744 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_inscr}
+2025-03-12 18:27:27.420316 - rocketbot - INFO - request: facturacion : line 4.5.2.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_ri
+2025-03-12 18:27:27.608504 - rocketbot - INFO - request: facturacion : line 4.5.2.3 - rpasystem : setVar  id: e0d5b7c3-2b35-6c46-6f6b-840c0f29f878 -  - {filas_ri} + 1
+2025-03-12 18:27:27.745137 - rocketbot - INFO - request: facturacion : line 4.5.2.4 - rpascripts : module  id: 0c14582b-00a9-be87-adc8-6f7e98760e0e -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_inscr}","cell_range2":"A{filas_ri}:N{filas_ri}","option":"all"}
+2025-03-12 18:27:27.931467 - rocketbot - INFO - request: facturacion : line 4.5.2.5 - rpasystem : setVar  id: a7cfd6a4-ebe8-9c75-6c6b-a1372d48afac -  - {counter} + 1
+2025-03-12 18:27:28.120497 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":2}
+2025-03-12 18:27:28.122563 - rocketbot - INFO - For count: 3
+2025-03-12 18:27:28.244316 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-12 18:27:28.432650 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-12 18:27:28.570558 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-12 18:27:28.746530 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_mono}
+2025-03-12 18:27:28.896341 - rocketbot - INFO - request: facturacion : line 4.5.2.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_rm
+2025-03-12 18:27:29.082648 - rocketbot - INFO - request: facturacion : line 4.5.2.1.3 - rpasystem : setVar  id: 7d638634-f9ad-d36d-ab35-a578b21d6dee -  - {filas_rm} + 1
+2025-03-12 18:27:29.221367 - rocketbot - INFO - request: facturacion : line 4.5.2.1.4 - rpascripts : module  id: da038b90-86c2-ac9f-d1ff-c9d2ad21c64c -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_mono}","cell_range2":"A{filas_rm}:N{filas_rm}","option":"all"}
+2025-03-12 18:27:29.391055 - rocketbot - INFO - request: facturacion : line 4.5.2.1.5 - rpasystem : setVar  id: 4de8c147-c65e-de06-57c7-8f0bc6eb012d -  - {counter} + 1
+2025-03-12 18:27:29.610916 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":3}
+2025-03-12 18:27:29.612005 - rocketbot - INFO - For count: 4
+2025-03-12 18:27:29.714324 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-12 18:27:29.944297 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-12 18:27:30.041058 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-12 18:27:30.258044 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_mono}
+2025-03-12 18:27:30.360994 - rocketbot - INFO - request: facturacion : line 4.5.2.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_rm
+2025-03-12 18:27:30.578883 - rocketbot - INFO - request: facturacion : line 4.5.2.1.3 - rpasystem : setVar  id: 7d638634-f9ad-d36d-ab35-a578b21d6dee -  - {filas_rm} + 1
+2025-03-12 18:27:30.685129 - rocketbot - INFO - request: facturacion : line 4.5.2.1.4 - rpascripts : module  id: da038b90-86c2-ac9f-d1ff-c9d2ad21c64c -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_mono}","cell_range2":"A{filas_rm}:N{filas_rm}","option":"all"}
+2025-03-12 18:27:30.893750 - rocketbot - INFO - request: facturacion : line 4.5.2.1.5 - rpasystem : setVar  id: 4de8c147-c65e-de06-57c7-8f0bc6eb012d -  - {counter} + 1
+2025-03-12 18:27:31.066947 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":4}
+2025-03-12 18:27:31.068160 - rocketbot - INFO - For count: 5
+2025-03-12 18:27:31.221880 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-12 18:27:31.394348 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-12 18:27:31.550391 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-12 18:27:31.706119 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpalogic : evaluateIf  id: 6147f3bc-f6cd-e29d-24c6-131090f271b7 -  - '{condicion_IVA}' == '{suj_exen}'
+2025-03-12 18:27:31.875830 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.1 - rpaexcel : setsheet  id: a0dcdc38-089b-b7f2-0ff5-c4cfeb1b09a6 -  - {suj_exen}
+2025-03-12 18:27:32.027657 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_se
+2025-03-12 18:27:32.199251 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.3 - rpasystem : setVar  id: 5836f9e1-05ee-fe06-52c4-09673e4d6a05 -  - {filas_se} + 1
+2025-03-12 18:27:32.356149 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.4 - rpascripts : module  id: 15f7b28a-0378-f8d3-b192-4098d96ad602 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{suj_exen}","cell_range2":"A{filas_se}:N{filas_se}","option":"all"}
+2025-03-12 18:27:32.510003 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.5 - rpasystem : setVar  id: a0958ef8-0eb8-be87-f2bd-bd06167d6b56 -  - {counter} + 1
+2025-03-12 18:27:32.748371 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":5}
+2025-03-12 18:27:32.748371 - rocketbot - INFO - For count: 5
+2025-03-12 18:27:32.838034 - rocketbot - INFO - request: facturacion : line 5 - rpascripts : module  id: f35fbec0-0d9e-0977-2219-8f8a487a1f81 -  - {"module_name":"AdvancedExcel","module":"deleteSheet","sheet_name":"Planilla de Facturacion","var_":"respuesta"}
+2025-03-12 18:27:33.069546 - rocketbot - INFO - request: facturacion : line 6 - rpalogic : evaluateIf  id: 0b8754a5-4627-996f-adfd-681eff710a43 -  - {respuesta}
+2025-03-12 18:27:33.209751 - rocketbot - INFO - request: facturacion : line 6.1 - rpaexcel : savexlsx  id: 5104b825-413d-09a1-e404-2c06ed0168fa -  - {path_git}/resources
+2025-03-12 18:27:33.381176 - rocketbot - INFO - request: facturacion : line 6.2 - rpalogic : evaluateIf  id: 6f6433d8-588e-bc92-8ebf-1e5fc1549932 -  - {respuesta}
+2025-03-12 18:27:33.550639 - rocketbot - INFO - request: facturacion : line 6.2.1 - rpalogic : group  id: cde99195-043c-034c-15ad-0212dcefe382 -  - 
+2025-03-12 18:27:33.695425 - rocketbot - INFO - request: facturacion : line 6.2.2 - rpadesktop : alert  id: 540d5afa-4994-cffb-8ca1-efb5fa91305b -  - Archivo guardado correctamente
+2025-03-12 18:27:34.945973 - rocketbot - INFO - request: facturacion : line 6.2.3 - rpaexcel : quitexcel  id: ee0d5ac2-ee21-8db4-031f-a5b3b0f929a7 -  - 
+2025-03-12 18:28:00.059431 - rocketbot - INFO - request: facturacion : line 6.2.1.1 - rpasystem : setVar  id: b7c3a6ed-f2cf-2281-6ba1-b7e487de6099 -  - %rocketbot_last_status%
+2025-03-12 18:28:00.060497 - system - ERROR - EXCEPTION IN (<string> system, L_253 ""): NameError: name 'false' is not defined
+2025-03-12 23:52:50.688711 - rocketbot - INFO - request: facturacion : line 1 - rpalogic : group  id: d4a103af-91eb-53b4-45ea-3e30a52b61c8 -  - 
+2025-03-12 23:52:50.793695 - rocketbot - INFO - request: facturacion : line 1.1 - rpascripts : module  id: 797dffcd-ff36-2b65-6f28-7665b967d31f -  - {"module_name":"killApp","module":"killApp","app_":"Excel"}
+2025-03-12 23:52:51.017171 - rocketbot - INFO - request: facturacion : line 1.2 - rpasystem : setVar  id: 26c3a7c2-a094-0bdb-a87c-23b30acffb56 -  - datetime.now()
+2025-03-12 23:52:51.119154 - rocketbot - INFO - request: facturacion : line 1.3 - rpafile : savedatafile  id: 71fa4eb5-4b9c-8272-f54a-b992c56ad17a -  - {"file_name":"{path_log}","type":"add","new_line":true,"file_data":"{fecha_inicio}"}
+2025-03-12 23:52:51.338842 - rocketbot - INFO - request: facturacion : line 2 - rpalogic : group  id: 3df269a5-7397-ed44-009d-78bb47b9ebb7 -  - 
+2025-03-12 23:52:51.459242 - rocketbot - INFO - request: facturacion : line 2.1 - rpascripts : module  id: e0dbbf0b-6094-af95-b406-a3c648160904 -  - {"module_name":"ControlIni","module":"leerIni","content":"C:/Users/Ignacio/OneDrive/Documents/git-and-github/RobotClase2/main/resources/config_bot2.ini","variable":"{config}"}
+2025-03-12 23:52:51.662619 - rocketbot - INFO - request: facturacion : line 2.2 - rpascripts : module  id: 868321ca-2fbe-9233-8837-73d7127be913 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_git","idvar":"path_git"}
+2025-03-12 23:52:51.849390 - rocketbot - INFO - request: facturacion : line 2.3 - rpascripts : module  id: 2077a0b2-2b6a-bbe4-9bfe-a94e100d71d5 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_log","idvar":"path_log"}
+2025-03-12 23:52:51.987894 - rocketbot - INFO - request: facturacion : line 2.4 - rpascripts : module  id: 5d3b6e14-efcf-56ee-e353-eb1c0af87089 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_archivo","idvar":"path_archivo"}
+2025-03-12 23:52:52.175329 - rocketbot - INFO - request: facturacion : line 2.5 - rpascripts : module  id: 1020d70f-6d9d-6d91-cc38-7d207184a7c9 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"resp_inscr","idvar":"resp_inscr"}
+2025-03-12 23:52:52.300521 - rocketbot - INFO - request: facturacion : line 2.6 - rpascripts : module  id: 27739039-13c0-cab5-b4d5-4671c0c222be -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"resp_mono","idvar":"resp_mono"}
+2025-03-12 23:52:52.487822 - rocketbot - INFO - request: facturacion : line 2.7 - rpascripts : module  id: 6b423d7f-695f-3500-8b08-b4dcdc86c1aa -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"suj_exen","idvar":"suj_exen"}
+2025-03-12 23:52:52.661003 - rocketbot - INFO - request: facturacion : line 3 - rpalogic : group  id: df5cae10-f914-9b03-cc16-24c3df91ed5b -  - 
+2025-03-12 23:52:52.801594 - rocketbot - INFO - request: facturacion : line 3.1 - rpalogic : trycatch  id: a8595513-f577-5d04-ae89-c9a230287598 -  - 
+2025-03-12 23:52:52.974297 - rocketbot - INFO - request: facturacion : line 3.1.1 - rpaexcel : readxlsx  id: cb144be0-4d12-5857-617d-01948ab0d60f -  - {"file_path":"{path_git}/resources/classificacion_clientes.xlsx"}
+2025-03-12 23:52:52.976353 - Rocketbot - ERROR - EXCEPTION IN (<string> Rocketbot, L_192 ""): Exception: File not exists
+2025-03-12 23:52:53.126443 - rocketbot - INFO - request: facturacion : line 3.1.1 - rpaexcel : readxlsx  id: 39ff8897-a471-6150-ea6d-73cfb14fbb4d -  - {"file_path":"{path_archivo}"}
+2025-03-12 23:52:57.474811 - rocketbot - INFO - request: facturacion : line 3.1.2 - rpaexcel : savexlsx  id: be49d7f9-6bbc-456f-81b9-ec29486883a6 -  - {path_git}/resources/clasificacion_clientes.xlsx
+2025-03-12 23:52:57.953932 - rocketbot - INFO - request: facturacion : line 3.1.3 - rpaexcel : quitexcel  id: 573fd24b-3d4e-c8c2-d159-46806bf39a2b -  - 
+2025-03-12 23:52:58.200623 - rocketbot - INFO - request: facturacion : line 3.1.4 - rpaexcel : readxlsx  id: f669e23b-d3e8-6e59-1305-a1055c69fe23 -  - {"file_path":"{path_git}/resources/clasificacion_clientes.xlsx"}
+2025-03-12 23:53:01.108079 - rocketbot - INFO - request: facturacion : line 3.2 - rpalogic : evaluateIf  id: cd017491-7d63-c368-789e-9658fe77a10f -  - {respuesta}
+2025-03-12 23:53:01.375296 - rocketbot - INFO - request: facturacion : line 3.2.1 - rpascripts : module  id: ab46f2a5-bc61-71e9-6b7e-4ea1077022c1 -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{resp_inscr}"}
+2025-03-12 23:53:01.470886 - rocketbot - INFO - request: facturacion : line 3.2.2 - rpascripts : module  id: 144a62b7-7ed6-2015-00e6-5dedd709f6df -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{resp_mono}"}
+2025-03-12 23:53:01.921054 - rocketbot - INFO - request: facturacion : line 3.2.3 - rpascripts : module  id: 4d5531c6-04d9-9866-187d-71c1d051588a -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{suj_exen}"}
+2025-03-12 23:53:02.182906 - rocketbot - INFO - request: facturacion : line 3.3 - rpaexcel : getsheets  id: 6bf490f4-7ed7-f3aa-51b6-735a221420fb -  - sheets
+2025-03-12 23:53:02.305776 - rocketbot - INFO - request: facturacion : line 3.4 - rpasystem : setVar  id: 4f6e0ef8-06da-2948-a5b8-ff5a0cb5f383 -  - {sheets}[1:4]
+2025-03-12 23:53:02.526005 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":0}
+2025-03-12 23:53:02.527013 - rocketbot - INFO - For count: 1
+2025-03-12 23:53:02.628864 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-12 23:53:02.844268 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-12 23:53:03.159282 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":1}
+2025-03-12 23:53:03.160293 - rocketbot - INFO - For count: 2
+2025-03-12 23:53:03.281554 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-12 23:53:03.478068 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-12 23:53:03.683783 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":2}
+2025-03-12 23:53:03.710641 - rocketbot - INFO - For count: 3
+2025-03-12 23:53:03.889607 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-12 23:53:04.026610 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-12 23:53:04.305647 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":3}
+2025-03-12 23:53:04.307205 - rocketbot - INFO - For count: 3
+2025-03-12 23:53:04.447309 - rocketbot - INFO - request: facturacion : line 4 - rpalogic : group  id: 1a452126-dce8-3210-860f-e72ddb9401cc -  - 
+2025-03-12 23:53:04.633540 - rocketbot - INFO - request: facturacion : line 4.1 - rpasystem : setVar  id: 2d822424-091c-ff74-a719-d57a1b7dfaa2 -  - 4
+2025-03-12 23:53:04.757299 - rocketbot - INFO - request: facturacion : line 4.2 - rpaexcel : getrows  id: 9b608f8a-b2a4-8971-16e2-e54614c23c7b -  - filas
+2025-03-12 23:53:04.962662 - rocketbot - INFO - request: facturacion : line 4.3 - rpascripts : module  id: 687a9730-a67d-db4d-fa0f-ba854a41ba01 -  - {"module_name":"AdvancedExcel","module":"countColumns","sheet":"Planilla de Facturacion","var_":"columnas"}
+2025-03-12 23:53:05.085430 - rocketbot - INFO - request: facturacion : line 4.4 - rpascripts : module  id: 24ee1ce3-4816-bc86-8a2f-003a9e6de15f -  - {"module_name":"AdvancedExcel","module":"ReadCells","sheet":"Planilla de Facturacion","range":"A4:N{filas}","var_":"registros"}
+2025-03-12 23:53:05.322868 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":0}
+2025-03-12 23:53:05.323388 - rocketbot - INFO - For count: 1
+2025-03-12 23:53:05.494595 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-12 23:53:05.633385 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-12 23:53:05.820710 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_inscr}
+2025-03-12 23:53:05.943921 - rocketbot - INFO - request: facturacion : line 4.5.2.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_ri
+2025-03-12 23:53:06.227554 - rocketbot - INFO - request: facturacion : line 4.5.2.3 - rpasystem : setVar  id: e0d5b7c3-2b35-6c46-6f6b-840c0f29f878 -  - {filas_ri} + 1
+2025-03-12 23:53:06.350000 - rocketbot - INFO - request: facturacion : line 4.5.2.4 - rpascripts : module  id: 0c14582b-00a9-be87-adc8-6f7e98760e0e -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_inscr}","cell_range2":"A{filas_ri}:N{filas_ri}","option":"all"}
+2025-03-12 23:53:06.550475 - rocketbot - INFO - request: facturacion : line 4.5.2.5 - rpasystem : setVar  id: a7cfd6a4-ebe8-9c75-6c6b-a1372d48afac -  - {counter} + 1
+2025-03-12 23:53:06.820231 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":1}
+2025-03-12 23:53:06.822257 - rocketbot - INFO - For count: 2
+2025-03-12 23:53:06.935267 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-12 23:53:07.141753 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-12 23:53:07.248724 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_inscr}
+2025-03-12 23:53:07.463164 - rocketbot - INFO - request: facturacion : line 4.5.2.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_ri
+2025-03-12 23:53:07.635596 - rocketbot - INFO - request: facturacion : line 4.5.2.3 - rpasystem : setVar  id: e0d5b7c3-2b35-6c46-6f6b-840c0f29f878 -  - {filas_ri} + 1
+2025-03-12 23:53:07.790571 - rocketbot - INFO - request: facturacion : line 4.5.2.4 - rpascripts : module  id: 0c14582b-00a9-be87-adc8-6f7e98760e0e -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_inscr}","cell_range2":"A{filas_ri}:N{filas_ri}","option":"all"}
+2025-03-12 23:53:07.965436 - rocketbot - INFO - request: facturacion : line 4.5.2.5 - rpasystem : setVar  id: a7cfd6a4-ebe8-9c75-6c6b-a1372d48afac -  - {counter} + 1
+2025-03-12 23:53:08.417289 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":2}
+2025-03-12 23:53:08.419412 - rocketbot - INFO - For count: 3
+2025-03-12 23:53:08.664357 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-12 23:53:08.741325 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-12 23:53:08.990882 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-12 23:53:09.112534 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_mono}
+2025-03-12 23:53:09.312321 - rocketbot - INFO - request: facturacion : line 4.5.2.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_rm
+2025-03-12 23:53:09.449409 - rocketbot - INFO - request: facturacion : line 4.5.2.1.3 - rpasystem : setVar  id: 7d638634-f9ad-d36d-ab35-a578b21d6dee -  - {filas_rm} + 1
+2025-03-12 23:53:09.639660 - rocketbot - INFO - request: facturacion : line 4.5.2.1.4 - rpascripts : module  id: da038b90-86c2-ac9f-d1ff-c9d2ad21c64c -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_mono}","cell_range2":"A{filas_rm}:N{filas_rm}","option":"all"}
+2025-03-12 23:53:09.758568 - rocketbot - INFO - request: facturacion : line 4.5.2.1.5 - rpasystem : setVar  id: 4de8c147-c65e-de06-57c7-8f0bc6eb012d -  - {counter} + 1
+2025-03-12 23:53:10.044203 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":3}
+2025-03-12 23:53:10.045634 - rocketbot - INFO - For count: 4
+2025-03-12 23:53:10.149312 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-12 23:53:10.374001 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-12 23:53:10.496227 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-12 23:53:10.696066 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_mono}
+2025-03-12 23:53:10.819091 - rocketbot - INFO - request: facturacion : line 4.5.2.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_rm
+2025-03-12 23:53:11.040703 - rocketbot - INFO - request: facturacion : line 4.5.2.1.3 - rpasystem : setVar  id: 7d638634-f9ad-d36d-ab35-a578b21d6dee -  - {filas_rm} + 1
+2025-03-12 23:53:11.145739 - rocketbot - INFO - request: facturacion : line 4.5.2.1.4 - rpascripts : module  id: da038b90-86c2-ac9f-d1ff-c9d2ad21c64c -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_mono}","cell_range2":"A{filas_rm}:N{filas_rm}","option":"all"}
+2025-03-12 23:53:11.363203 - rocketbot - INFO - request: facturacion : line 4.5.2.1.5 - rpasystem : setVar  id: 4de8c147-c65e-de06-57c7-8f0bc6eb012d -  - {counter} + 1
+2025-03-12 23:53:11.537181 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":4}
+2025-03-12 23:53:11.545730 - rocketbot - INFO - For count: 5
+2025-03-12 23:53:11.690214 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-12 23:53:11.866737 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-12 23:53:12.018011 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-12 23:53:12.191860 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpalogic : evaluateIf  id: 6147f3bc-f6cd-e29d-24c6-131090f271b7 -  - '{condicion_IVA}' == '{suj_exen}'
+2025-03-12 23:53:12.343864 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.1 - rpaexcel : setsheet  id: a0dcdc38-089b-b7f2-0ff5-c4cfeb1b09a6 -  - {suj_exen}
+2025-03-12 23:53:12.515943 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_se
+2025-03-12 23:53:12.686841 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.3 - rpasystem : setVar  id: 5836f9e1-05ee-fe06-52c4-09673e4d6a05 -  - {filas_se} + 1
+2025-03-12 23:53:12.842825 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.4 - rpascripts : module  id: 15f7b28a-0378-f8d3-b192-4098d96ad602 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{suj_exen}","cell_range2":"A{filas_se}:N{filas_se}","option":"all"}
+2025-03-12 23:53:13.019391 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.5 - rpasystem : setVar  id: a0958ef8-0eb8-be87-f2bd-bd06167d6b56 -  - {counter} + 1
+2025-03-12 23:53:13.454967 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":5}
+2025-03-12 23:53:13.456407 - rocketbot - INFO - For count: 5
+2025-03-12 23:53:13.703728 - rocketbot - INFO - request: facturacion : line 5 - rpalogic : trycatch  id: 21b01d8f-b000-df75-5935-76a257998fd7 -  - 
+2025-03-12 23:53:13.777018 - rocketbot - INFO - request: facturacion : line 5.1 - rpascripts : module  id: f35fbec0-0d9e-0977-2219-8f8a487a1f81 -  - {"module_name":"AdvancedExcel","module":"deleteSheet","sheet_name":"Planilla de Facturacion","var_":"respuesta"}
+2025-03-12 23:53:14.027896 - rocketbot - INFO - request: facturacion : line 6 - rpalogic : trycatch  id: 37a1b6b1-65f8-0e72-e9d7-2e5c68576985 -  - 
+2025-03-12 23:53:14.228572 - rocketbot - INFO - request: facturacion : line 6.1 - rpaexcel : savexlsx  id: 5104b825-413d-09a1-e404-2c06ed0168fa -  - {path_git}/resources
+2025-03-12 23:53:14.339045 - rocketbot - INFO - request: facturacion : line 6.2 - rpalogic : group  id: cde99195-043c-034c-15ad-0212dcefe382 -  - 
+2025-03-12 23:53:14.589686 - rocketbot - INFO - request: facturacion : line 6.2.1 - rpasystem : setVar  id: b7c3a6ed-f2cf-2281-6ba1-b7e487de6099 -  - %rocketbot_last_status%
+2025-03-12 23:53:14.590689 - system - ERROR - EXCEPTION IN (<string> system, L_253 ""): NameError: name 'true' is not defined
+2025-03-12 23:53:14.697887 - rocketbot - INFO - request: facturacion : line 6.1 - rpalogic : group  id: 0b766f05-946d-54af-7b30-3f6cd44fadbe -  - 
+2025-03-12 23:53:14.917760 - rocketbot - INFO - request: facturacion : line 6.1.1 - rpasystem : setVar  id: b7c3a6ed-f2cf-2281-6ba1-b7e487de6099 -  - %rocketbot_last_status%
+2025-03-12 23:53:14.976759 - system - ERROR - EXCEPTION IN (<string> system, L_253 ""): NameError: name 'true' is not defined
+2025-03-12 23:53:15.025842 - rocketbot - INFO - request: facturacion : line 5.1 - rpalogic : group  id: 12f981d7-6bde-d1e8-9905-e48dad328a80 -  - 
+2025-03-12 23:53:15.305653 - rocketbot - INFO - request: facturacion : line 5.1.1 - rpasystem : setVar  id: b7c3a6ed-f2cf-2281-6ba1-b7e487de6099 -  - %rocketbot_last_status%
+2025-03-12 23:53:15.307674 - system - ERROR - EXCEPTION IN (<string> system, L_253 ""): NameError: name 'true' is not defined
+2025-03-13 00:01:57.043039 - rocketbot - INFO - request: facturacion : line 1 - rpalogic : group  id: d4a103af-91eb-53b4-45ea-3e30a52b61c8 -  - 
+2025-03-13 00:01:57.119087 - rocketbot - INFO - request: facturacion : line 1.1 - rpascripts : module  id: 797dffcd-ff36-2b65-6f28-7665b967d31f -  - {"module_name":"killApp","module":"killApp","app_":"Excel"}
+2025-03-13 00:01:57.368787 - rocketbot - INFO - request: facturacion : line 1.2 - rpasystem : setVar  id: 26c3a7c2-a094-0bdb-a87c-23b30acffb56 -  - datetime.now()
+2025-03-13 00:01:57.460758 - rocketbot - INFO - request: facturacion : line 1.3 - rpafile : savedatafile  id: 71fa4eb5-4b9c-8272-f54a-b992c56ad17a -  - {"file_name":"{path_log}","type":"add","new_line":true,"file_data":"{fecha_inicio}"}
+2025-03-13 00:01:57.689901 - rocketbot - INFO - request: facturacion : line 2 - rpalogic : group  id: 3df269a5-7397-ed44-009d-78bb47b9ebb7 -  - 
+2025-03-13 00:01:57.833474 - rocketbot - INFO - request: facturacion : line 2.1 - rpascripts : module  id: e0dbbf0b-6094-af95-b406-a3c648160904 -  - {"module_name":"ControlIni","module":"leerIni","content":"C:/Users/Ignacio/OneDrive/Documents/git-and-github/RobotClase2/main/resources/config_bot2.ini","variable":"{config}"}
+2025-03-13 00:01:57.998115 - rocketbot - INFO - request: facturacion : line 2.2 - rpascripts : module  id: 868321ca-2fbe-9233-8837-73d7127be913 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_git","idvar":"path_git"}
+2025-03-13 00:01:58.154539 - rocketbot - INFO - request: facturacion : line 2.3 - rpascripts : module  id: 2077a0b2-2b6a-bbe4-9bfe-a94e100d71d5 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_log","idvar":"path_log"}
+2025-03-13 00:01:58.372346 - rocketbot - INFO - request: facturacion : line 2.4 - rpascripts : module  id: 5d3b6e14-efcf-56ee-e353-eb1c0af87089 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_archivo","idvar":"path_archivo"}
+2025-03-13 00:01:58.500393 - rocketbot - INFO - request: facturacion : line 2.5 - rpascripts : module  id: 1020d70f-6d9d-6d91-cc38-7d207184a7c9 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"resp_inscr","idvar":"resp_inscr"}
+2025-03-13 00:01:58.682932 - rocketbot - INFO - request: facturacion : line 2.6 - rpascripts : module  id: 27739039-13c0-cab5-b4d5-4671c0c222be -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"resp_mono","idvar":"resp_mono"}
+2025-03-13 00:01:58.825069 - rocketbot - INFO - request: facturacion : line 2.7 - rpascripts : module  id: 6b423d7f-695f-3500-8b08-b4dcdc86c1aa -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"suj_exen","idvar":"suj_exen"}
+2025-03-13 00:01:59.008304 - rocketbot - INFO - request: facturacion : line 3 - rpalogic : group  id: df5cae10-f914-9b03-cc16-24c3df91ed5b -  - 
+2025-03-13 00:01:59.150301 - rocketbot - INFO - request: facturacion : line 3.1 - rpalogic : trycatch  id: a8595513-f577-5d04-ae89-c9a230287598 -  - 
+2025-03-13 00:01:59.320312 - rocketbot - INFO - request: facturacion : line 3.1.1 - rpaexcel : readxlsx  id: cb144be0-4d12-5857-617d-01948ab0d60f -  - {"file_path":"{path_git}/resources/classificacion_clientes.xlsx"}
+2025-03-13 00:01:59.321864 - Rocketbot - ERROR - EXCEPTION IN (<string> Rocketbot, L_192 ""): Exception: File not exists
+2025-03-13 00:01:59.475455 - rocketbot - INFO - request: facturacion : line 3.1.1 - rpaexcel : readxlsx  id: 39ff8897-a471-6150-ea6d-73cfb14fbb4d -  - {"file_path":"{path_archivo}"}
+2025-03-13 00:02:02.075908 - rocketbot - INFO - request: facturacion : line 3.1.2 - rpaexcel : savexlsx  id: be49d7f9-6bbc-456f-81b9-ec29486883a6 -  - {path_git}/resources/clasificacion_clientes.xlsx
+2025-03-13 00:02:02.534408 - rocketbot - INFO - request: facturacion : line 3.1.3 - rpaexcel : quitexcel  id: 573fd24b-3d4e-c8c2-d159-46806bf39a2b -  - 
+2025-03-13 00:02:02.854370 - rocketbot - INFO - request: facturacion : line 3.1.4 - rpaexcel : readxlsx  id: f669e23b-d3e8-6e59-1305-a1055c69fe23 -  - {"file_path":"{path_git}/resources/clasificacion_clientes.xlsx"}
+2025-03-13 00:02:05.836534 - rocketbot - INFO - request: facturacion : line 3.2 - rpalogic : evaluateIf  id: cd017491-7d63-c368-789e-9658fe77a10f -  - {respuesta}
+2025-03-13 00:02:06.095605 - rocketbot - INFO - request: facturacion : line 3.2.1 - rpascripts : module  id: ab46f2a5-bc61-71e9-6b7e-4ea1077022c1 -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{resp_inscr}"}
+2025-03-13 00:02:06.194262 - rocketbot - INFO - request: facturacion : line 3.2.2 - rpascripts : module  id: 144a62b7-7ed6-2015-00e6-5dedd709f6df -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{resp_mono}"}
+2025-03-13 00:02:06.640834 - rocketbot - INFO - request: facturacion : line 3.2.3 - rpascripts : module  id: 4d5531c6-04d9-9866-187d-71c1d051588a -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{suj_exen}"}
+2025-03-13 00:02:06.902363 - rocketbot - INFO - request: facturacion : line 3.3 - rpaexcel : getsheets  id: 6bf490f4-7ed7-f3aa-51b6-735a221420fb -  - sheets
+2025-03-13 00:02:07.029656 - rocketbot - INFO - request: facturacion : line 3.4 - rpasystem : setVar  id: 4f6e0ef8-06da-2948-a5b8-ff5a0cb5f383 -  - {sheets}[1:4]
+2025-03-13 00:02:07.234259 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":0}
+2025-03-13 00:02:07.235938 - rocketbot - INFO - For count: 1
+2025-03-13 00:02:07.354336 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-13 00:02:07.556591 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-13 00:02:07.744948 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":1}
+2025-03-13 00:02:07.747052 - rocketbot - INFO - For count: 2
+2025-03-13 00:02:08.043078 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-13 00:02:08.164849 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-13 00:02:08.462899 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":2}
+2025-03-13 00:02:08.465203 - rocketbot - INFO - For count: 3
+2025-03-13 00:02:08.599470 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-13 00:02:08.785433 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-13 00:02:09.007984 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":3}
+2025-03-13 00:02:09.008222 - rocketbot - INFO - For count: 3
+2025-03-13 00:02:09.202354 - rocketbot - INFO - request: facturacion : line 4 - rpalogic : group  id: 1a452126-dce8-3210-860f-e72ddb9401cc -  - 
+2025-03-13 00:02:09.336687 - rocketbot - INFO - request: facturacion : line 4.1 - rpasystem : setVar  id: 2d822424-091c-ff74-a719-d57a1b7dfaa2 -  - 4
+2025-03-13 00:02:09.521047 - rocketbot - INFO - request: facturacion : line 4.2 - rpaexcel : getrows  id: 9b608f8a-b2a4-8971-16e2-e54614c23c7b -  - filas
+2025-03-13 00:02:09.659812 - rocketbot - INFO - request: facturacion : line 4.3 - rpascripts : module  id: 687a9730-a67d-db4d-fa0f-ba854a41ba01 -  - {"module_name":"AdvancedExcel","module":"countColumns","sheet":"Planilla de Facturacion","var_":"columnas"}
+2025-03-13 00:02:09.846561 - rocketbot - INFO - request: facturacion : line 4.4 - rpascripts : module  id: 24ee1ce3-4816-bc86-8a2f-003a9e6de15f -  - {"module_name":"AdvancedExcel","module":"ReadCells","sheet":"Planilla de Facturacion","range":"A4:N{filas}","var_":"registros"}
+2025-03-13 00:02:10.004529 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":0}
+2025-03-13 00:02:10.005576 - rocketbot - INFO - For count: 1
+2025-03-13 00:02:10.208069 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:02:10.314874 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:02:10.533959 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_inscr}
+2025-03-13 00:02:10.639458 - rocketbot - INFO - request: facturacion : line 4.5.2.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_ri
+2025-03-13 00:02:10.872965 - rocketbot - INFO - request: facturacion : line 4.5.2.3 - rpasystem : setVar  id: e0d5b7c3-2b35-6c46-6f6b-840c0f29f878 -  - {filas_ri} + 1
+2025-03-13 00:02:10.976770 - rocketbot - INFO - request: facturacion : line 4.5.2.4 - rpascripts : module  id: 0c14582b-00a9-be87-adc8-6f7e98760e0e -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_inscr}","cell_range2":"A{filas_ri}:N{filas_ri}","option":"all"}
+2025-03-13 00:02:11.201091 - rocketbot - INFO - request: facturacion : line 4.5.2.5 - rpasystem : setVar  id: a7cfd6a4-ebe8-9c75-6c6b-a1372d48afac -  - {counter} + 1
+2025-03-13 00:02:11.371589 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":1}
+2025-03-13 00:02:11.372970 - rocketbot - INFO - For count: 2
+2025-03-13 00:02:11.525926 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:02:11.699103 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:02:11.851020 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_inscr}
+2025-03-13 00:02:12.022064 - rocketbot - INFO - request: facturacion : line 4.5.2.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_ri
+2025-03-13 00:02:12.182337 - rocketbot - INFO - request: facturacion : line 4.5.2.3 - rpasystem : setVar  id: e0d5b7c3-2b35-6c46-6f6b-840c0f29f878 -  - {filas_ri} + 1
+2025-03-13 00:02:12.355823 - rocketbot - INFO - request: facturacion : line 4.5.2.4 - rpascripts : module  id: 0c14582b-00a9-be87-adc8-6f7e98760e0e -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_inscr}","cell_range2":"A{filas_ri}:N{filas_ri}","option":"all"}
+2025-03-13 00:02:12.494832 - rocketbot - INFO - request: facturacion : line 4.5.2.5 - rpasystem : setVar  id: a7cfd6a4-ebe8-9c75-6c6b-a1372d48afac -  - {counter} + 1
+2025-03-13 00:02:12.763866 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":2}
+2025-03-13 00:02:12.766005 - rocketbot - INFO - For count: 3
+2025-03-13 00:02:12.882139 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:02:13.088293 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:02:13.213699 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-13 00:02:13.415652 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_mono}
+2025-03-13 00:02:13.536727 - rocketbot - INFO - request: facturacion : line 4.5.2.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_rm
+2025-03-13 00:02:13.758451 - rocketbot - INFO - request: facturacion : line 4.5.2.1.3 - rpasystem : setVar  id: 7d638634-f9ad-d36d-ab35-a578b21d6dee -  - {filas_rm} + 1
+2025-03-13 00:02:13.880077 - rocketbot - INFO - request: facturacion : line 4.5.2.1.4 - rpascripts : module  id: da038b90-86c2-ac9f-d1ff-c9d2ad21c64c -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_mono}","cell_range2":"A{filas_rm}:N{filas_rm}","option":"all"}
+2025-03-13 00:02:14.081144 - rocketbot - INFO - request: facturacion : line 4.5.2.1.5 - rpasystem : setVar  id: 4de8c147-c65e-de06-57c7-8f0bc6eb012d -  - {counter} + 1
+2025-03-13 00:02:14.274201 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":3}
+2025-03-13 00:02:14.275208 - rocketbot - INFO - For count: 4
+2025-03-13 00:02:14.392076 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:02:14.599613 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:02:14.738198 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-13 00:02:14.920982 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_mono}
+2025-03-13 00:02:15.061408 - rocketbot - INFO - request: facturacion : line 4.5.2.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_rm
+2025-03-13 00:02:15.250180 - rocketbot - INFO - request: facturacion : line 4.5.2.1.3 - rpasystem : setVar  id: 7d638634-f9ad-d36d-ab35-a578b21d6dee -  - {filas_rm} + 1
+2025-03-13 00:02:15.388255 - rocketbot - INFO - request: facturacion : line 4.5.2.1.4 - rpascripts : module  id: da038b90-86c2-ac9f-d1ff-c9d2ad21c64c -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_mono}","cell_range2":"A{filas_rm}:N{filas_rm}","option":"all"}
+2025-03-13 00:02:15.575991 - rocketbot - INFO - request: facturacion : line 4.5.2.1.5 - rpasystem : setVar  id: 4de8c147-c65e-de06-57c7-8f0bc6eb012d -  - {counter} + 1
+2025-03-13 00:02:15.799483 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":4}
+2025-03-13 00:02:15.801616 - rocketbot - INFO - For count: 5
+2025-03-13 00:02:15.903491 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:02:16.124128 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:02:16.233300 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-13 00:02:16.448503 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpalogic : evaluateIf  id: 6147f3bc-f6cd-e29d-24c6-131090f271b7 -  - '{condicion_IVA}' == '{suj_exen}'
+2025-03-13 00:02:16.558186 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.1 - rpaexcel : setsheet  id: a0dcdc38-089b-b7f2-0ff5-c4cfeb1b09a6 -  - {suj_exen}
+2025-03-13 00:02:16.772189 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_se
+2025-03-13 00:02:16.897092 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.3 - rpasystem : setVar  id: 5836f9e1-05ee-fe06-52c4-09673e4d6a05 -  - {filas_se} + 1
+2025-03-13 00:02:17.099425 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.4 - rpascripts : module  id: 15f7b28a-0378-f8d3-b192-4098d96ad602 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{suj_exen}","cell_range2":"A{filas_se}:N{filas_se}","option":"all"}
+2025-03-13 00:02:17.224930 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.5 - rpasystem : setVar  id: a0958ef8-0eb8-be87-f2bd-bd06167d6b56 -  - {counter} + 1
+2025-03-13 00:02:17.650361 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":5}
+2025-03-13 00:02:17.652382 - rocketbot - INFO - For count: 5
+2025-03-13 00:02:17.913444 - rocketbot - INFO - request: facturacion : line 5 - rpalogic : trycatch  id: 21b01d8f-b000-df75-5935-76a257998fd7 -  - 
+2025-03-13 00:02:17.971224 - rocketbot - INFO - request: facturacion : line 5.1 - rpascripts : module  id: f35fbec0-0d9e-0977-2219-8f8a487a1f81 -  - {"module_name":"AdvancedExcel","module":"deleteSheet","sheet_name":"Planilla de Facturacion","var_":"respuesta"}
+2025-03-13 00:02:18.237202 - rocketbot - INFO - request: facturacion : line 6 - rpalogic : trycatch  id: 37a1b6b1-65f8-0e72-e9d7-2e5c68576985 -  - 
+2025-03-13 00:02:18.345098 - rocketbot - INFO - request: facturacion : line 6.1 - rpaexcel : savexlsx  id: 5104b825-413d-09a1-e404-2c06ed0168fa -  - {path_git}/resources
+2025-03-13 00:02:18.563362 - rocketbot - INFO - request: facturacion : line 6.2 - rpalogic : group  id: cde99195-043c-034c-15ad-0212dcefe382 -  - 
+2025-03-13 00:02:18.671386 - rocketbot - INFO - request: facturacion : line 6.2.1 - rpasystem : setVar  id: b7c3a6ed-f2cf-2281-6ba1-b7e487de6099 -  - %rocketbot_last_status%
+2025-03-13 00:02:18.672465 - system - ERROR - EXCEPTION IN (<string> system, L_253 ""): NameError: name 'true' is not defined
+2025-03-13 00:02:18.885200 - rocketbot - INFO - request: facturacion : line 6.1 - rpalogic : group  id: 0b766f05-946d-54af-7b30-3f6cd44fadbe -  - 
+2025-03-13 00:02:18.996358 - rocketbot - INFO - request: facturacion : line 6.1.1 - rpasystem : setVar  id: b7c3a6ed-f2cf-2281-6ba1-b7e487de6099 -  - %rocketbot_last_status%
+2025-03-13 00:02:18.998379 - system - ERROR - EXCEPTION IN (<string> system, L_253 ""): NameError: name 'true' is not defined
+2025-03-13 00:02:19.212399 - rocketbot - INFO - request: facturacion : line 5.1 - rpalogic : group  id: 12f981d7-6bde-d1e8-9905-e48dad328a80 -  - 
+2025-03-13 00:02:19.320423 - rocketbot - INFO - request: facturacion : line 5.1.1 - rpasystem : setVar  id: d3c8cc34-1e50-78f4-f1b8-358b0de76fee -  - %rocketbot_last_status%
+2025-03-13 00:02:19.321657 - system - ERROR - EXCEPTION IN (<string> system, L_253 ""): NameError: name 'true' is not defined
+2025-03-13 00:04:21.179747 - rocketbot - INFO - request: facturacion : line 1 - rpalogic : group  id: d4a103af-91eb-53b4-45ea-3e30a52b61c8 -  - 
+2025-03-13 00:04:21.508464 - rocketbot - INFO - request: facturacion : line 1.1 - rpascripts : module  id: 797dffcd-ff36-2b65-6f28-7665b967d31f -  - {"module_name":"killApp","module":"killApp","app_":"Excel"}
+2025-03-13 00:04:21.882905 - rocketbot - INFO - request: facturacion : line 1.2 - rpasystem : setVar  id: 26c3a7c2-a094-0bdb-a87c-23b30acffb56 -  - datetime.now()
+2025-03-13 00:04:22.147126 - rocketbot - INFO - request: facturacion : line 1.3 - rpafile : savedatafile  id: 71fa4eb5-4b9c-8272-f54a-b992c56ad17a -  - {"file_name":"{path_log}","type":"add","new_line":true,"file_data":"{fecha_inicio}"}
+2025-03-13 00:04:22.209957 - rocketbot - INFO - request: facturacion : line 2 - rpalogic : group  id: 3df269a5-7397-ed44-009d-78bb47b9ebb7 -  - 
+2025-03-13 00:04:22.472634 - rocketbot - INFO - request: facturacion : line 2.1 - rpascripts : module  id: e0dbbf0b-6094-af95-b406-a3c648160904 -  - {"module_name":"ControlIni","module":"leerIni","content":"C:/Users/Ignacio/OneDrive/Documents/git-and-github/RobotClase2/main/resources/config_bot2.ini","variable":"{config}"}
+2025-03-13 00:04:22.535139 - rocketbot - INFO - request: facturacion : line 2.2 - rpascripts : module  id: 868321ca-2fbe-9233-8837-73d7127be913 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_git","idvar":"path_git"}
+2025-03-13 00:04:22.797528 - rocketbot - INFO - request: facturacion : line 2.3 - rpascripts : module  id: 2077a0b2-2b6a-bbe4-9bfe-a94e100d71d5 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_log","idvar":"path_log"}
+2025-03-13 00:04:23.031685 - rocketbot - INFO - request: facturacion : line 2.4 - rpascripts : module  id: 5d3b6e14-efcf-56ee-e353-eb1c0af87089 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_archivo","idvar":"path_archivo"}
+2025-03-13 00:04:23.249301 - rocketbot - INFO - request: facturacion : line 2.5 - rpascripts : module  id: 1020d70f-6d9d-6d91-cc38-7d207184a7c9 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"resp_inscr","idvar":"resp_inscr"}
+2025-03-13 00:04:23.470712 - rocketbot - INFO - request: facturacion : line 2.6 - rpascripts : module  id: 27739039-13c0-cab5-b4d5-4671c0c222be -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"resp_mono","idvar":"resp_mono"}
+2025-03-13 00:04:23.658179 - rocketbot - INFO - request: facturacion : line 2.7 - rpascripts : module  id: 6b423d7f-695f-3500-8b08-b4dcdc86c1aa -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"suj_exen","idvar":"suj_exen"}
+2025-03-13 00:04:23.830229 - rocketbot - INFO - request: facturacion : line 3 - rpalogic : group  id: df5cae10-f914-9b03-cc16-24c3df91ed5b -  - 
+2025-03-13 00:04:24.127833 - rocketbot - INFO - request: facturacion : line 3.1 - rpalogic : trycatch  id: a8595513-f577-5d04-ae89-c9a230287598 -  - 
+2025-03-13 00:04:24.344639 - rocketbot - INFO - request: facturacion : line 3.1.1 - rpaexcel : readxlsx  id: cb144be0-4d12-5857-617d-01948ab0d60f -  - {"file_path":"{path_git}/resources/classificacion_clientes.xlsx"}
+2025-03-13 00:04:24.346996 - Rocketbot - ERROR - EXCEPTION IN (<string> Rocketbot, L_192 ""): Exception: File not exists
+2025-03-13 00:04:24.451653 - rocketbot - INFO - request: facturacion : line 3.1.1 - rpaexcel : readxlsx  id: 39ff8897-a471-6150-ea6d-73cfb14fbb4d -  - {"file_path":"{path_archivo}"}
+2025-03-13 00:04:27.069983 - rocketbot - INFO - request: facturacion : line 3.1.2 - rpaexcel : savexlsx  id: be49d7f9-6bbc-456f-81b9-ec29486883a6 -  - {path_git}/resources/clasificacion_clientes.xlsx
+2025-03-13 00:04:27.524583 - rocketbot - INFO - request: facturacion : line 3.1.3 - rpaexcel : quitexcel  id: 573fd24b-3d4e-c8c2-d159-46806bf39a2b -  - 
+2025-03-13 00:04:27.820951 - rocketbot - INFO - request: facturacion : line 3.1.4 - rpaexcel : readxlsx  id: f669e23b-d3e8-6e59-1305-a1055c69fe23 -  - {"file_path":"{path_git}/resources/clasificacion_clientes.xlsx"}
+2025-03-13 00:04:30.665692 - rocketbot - INFO - request: facturacion : line 3.2 - rpalogic : evaluateIf  id: cd017491-7d63-c368-789e-9658fe77a10f -  - {respuesta}
+2025-03-13 00:04:30.928285 - rocketbot - INFO - request: facturacion : line 3.2.1 - rpascripts : module  id: ab46f2a5-bc61-71e9-6b7e-4ea1077022c1 -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{resp_inscr}"}
+2025-03-13 00:04:31.027545 - rocketbot - INFO - request: facturacion : line 3.2.2 - rpascripts : module  id: 144a62b7-7ed6-2015-00e6-5dedd709f6df -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{resp_mono}"}
+2025-03-13 00:04:31.473473 - rocketbot - INFO - request: facturacion : line 3.2.3 - rpascripts : module  id: 4d5531c6-04d9-9866-187d-71c1d051588a -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{suj_exen}"}
+2025-03-13 00:04:31.723820 - rocketbot - INFO - request: facturacion : line 3.3 - rpaexcel : getsheets  id: 6bf490f4-7ed7-f3aa-51b6-735a221420fb -  - sheets
+2025-03-13 00:04:31.862229 - rocketbot - INFO - request: facturacion : line 3.4 - rpasystem : setVar  id: 4f6e0ef8-06da-2948-a5b8-ff5a0cb5f383 -  - {sheets}[1:4]
+2025-03-13 00:04:32.066636 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":0}
+2025-03-13 00:04:32.093281 - rocketbot - INFO - For count: 1
+2025-03-13 00:04:32.173258 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-13 00:04:32.425069 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-13 00:04:32.563405 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":1}
+2025-03-13 00:04:32.564738 - rocketbot - INFO - For count: 2
+2025-03-13 00:04:32.830097 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-13 00:04:32.968215 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-13 00:04:33.235754 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":2}
+2025-03-13 00:04:33.236765 - rocketbot - INFO - For count: 3
+2025-03-13 00:04:33.390616 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-13 00:04:33.561285 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-13 00:04:33.810397 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":3}
+2025-03-13 00:04:33.811429 - rocketbot - INFO - For count: 3
+2025-03-13 00:04:33.986506 - rocketbot - INFO - request: facturacion : line 4 - rpalogic : group  id: 1a452126-dce8-3210-860f-e72ddb9401cc -  - 
+2025-03-13 00:04:34.134675 - rocketbot - INFO - request: facturacion : line 4.1 - rpasystem : setVar  id: 2d822424-091c-ff74-a719-d57a1b7dfaa2 -  - 4
+2025-03-13 00:04:34.307367 - rocketbot - INFO - request: facturacion : line 4.2 - rpaexcel : getrows  id: 9b608f8a-b2a4-8971-16e2-e54614c23c7b -  - filas
+2025-03-13 00:04:34.458309 - rocketbot - INFO - request: facturacion : line 4.3 - rpascripts : module  id: 687a9730-a67d-db4d-fa0f-ba854a41ba01 -  - {"module_name":"AdvancedExcel","module":"countColumns","sheet":"Planilla de Facturacion","var_":"columnas"}
+2025-03-13 00:04:34.645586 - rocketbot - INFO - request: facturacion : line 4.4 - rpascripts : module  id: 24ee1ce3-4816-bc86-8a2f-003a9e6de15f -  - {"module_name":"AdvancedExcel","module":"ReadCells","sheet":"Planilla de Facturacion","range":"A4:N{filas}","var_":"registros"}
+2025-03-13 00:04:34.813808 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":0}
+2025-03-13 00:04:34.815890 - rocketbot - INFO - For count: 1
+2025-03-13 00:04:35.002810 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:04:35.126685 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:04:35.333084 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_inscr}
+2025-03-13 00:04:35.435426 - rocketbot - INFO - request: facturacion : line 4.5.2.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_ri
+2025-03-13 00:04:35.672695 - rocketbot - INFO - request: facturacion : line 4.5.2.3 - rpasystem : setVar  id: e0d5b7c3-2b35-6c46-6f6b-840c0f29f878 -  - {filas_ri} + 1
+2025-03-13 00:04:35.792841 - rocketbot - INFO - request: facturacion : line 4.5.2.4 - rpascripts : module  id: 0c14582b-00a9-be87-adc8-6f7e98760e0e -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_inscr}","cell_range2":"A{filas_ri}:N{filas_ri}","option":"all"}
+2025-03-13 00:04:35.994099 - rocketbot - INFO - request: facturacion : line 4.5.2.5 - rpasystem : setVar  id: a7cfd6a4-ebe8-9c75-6c6b-a1372d48afac -  - {counter} + 1
+2025-03-13 00:04:36.187139 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":1}
+2025-03-13 00:04:36.189150 - rocketbot - INFO - For count: 2
+2025-03-13 00:04:36.307749 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:04:36.516802 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:04:36.620213 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_inscr}
+2025-03-13 00:04:36.836164 - rocketbot - INFO - request: facturacion : line 4.5.2.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_ri
+2025-03-13 00:04:36.957264 - rocketbot - INFO - request: facturacion : line 4.5.2.3 - rpasystem : setVar  id: e0d5b7c3-2b35-6c46-6f6b-840c0f29f878 -  - {filas_ri} + 1
+2025-03-13 00:04:37.165202 - rocketbot - INFO - request: facturacion : line 4.5.2.4 - rpascripts : module  id: 0c14582b-00a9-be87-adc8-6f7e98760e0e -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_inscr}","cell_range2":"A{filas_ri}:N{filas_ri}","option":"all"}
+2025-03-13 00:04:37.282343 - rocketbot - INFO - request: facturacion : line 4.5.2.5 - rpasystem : setVar  id: a7cfd6a4-ebe8-9c75-6c6b-a1372d48afac -  - {counter} + 1
+2025-03-13 00:04:37.571164 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":2}
+2025-03-13 00:04:37.573370 - rocketbot - INFO - For count: 3
+2025-03-13 00:04:37.691280 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:04:37.897662 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:04:38.018550 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-13 00:04:38.221162 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_mono}
+2025-03-13 00:04:38.342071 - rocketbot - INFO - request: facturacion : line 4.5.2.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_rm
+2025-03-13 00:04:38.561026 - rocketbot - INFO - request: facturacion : line 4.5.2.1.3 - rpasystem : setVar  id: 7d638634-f9ad-d36d-ab35-a578b21d6dee -  - {filas_rm} + 1
+2025-03-13 00:04:38.665141 - rocketbot - INFO - request: facturacion : line 4.5.2.1.4 - rpascripts : module  id: da038b90-86c2-ac9f-d1ff-c9d2ad21c64c -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_mono}","cell_range2":"A{filas_rm}:N{filas_rm}","option":"all"}
+2025-03-13 00:04:38.883724 - rocketbot - INFO - request: facturacion : line 4.5.2.1.5 - rpasystem : setVar  id: 4de8c147-c65e-de06-57c7-8f0bc6eb012d -  - {counter} + 1
+2025-03-13 00:04:39.070586 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":3}
+2025-03-13 00:04:39.071584 - rocketbot - INFO - For count: 4
+2025-03-13 00:04:39.242074 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:04:39.400260 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:04:39.570259 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-13 00:04:39.723888 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_mono}
+2025-03-13 00:04:39.898124 - rocketbot - INFO - request: facturacion : line 4.5.2.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_rm
+2025-03-13 00:04:40.067702 - rocketbot - INFO - request: facturacion : line 4.5.2.1.3 - rpasystem : setVar  id: 7d638634-f9ad-d36d-ab35-a578b21d6dee -  - {filas_rm} + 1
+2025-03-13 00:04:40.221786 - rocketbot - INFO - request: facturacion : line 4.5.2.1.4 - rpascripts : module  id: da038b90-86c2-ac9f-d1ff-c9d2ad21c64c -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_mono}","cell_range2":"A{filas_rm}:N{filas_rm}","option":"all"}
+2025-03-13 00:04:40.392415 - rocketbot - INFO - request: facturacion : line 4.5.2.1.5 - rpasystem : setVar  id: 4de8c147-c65e-de06-57c7-8f0bc6eb012d -  - {counter} + 1
+2025-03-13 00:04:40.691799 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":4}
+2025-03-13 00:04:40.694115 - rocketbot - INFO - For count: 5
+2025-03-13 00:04:40.796809 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:04:41.016991 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:04:41.142651 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-13 00:04:41.343513 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpalogic : evaluateIf  id: 6147f3bc-f6cd-e29d-24c6-131090f271b7 -  - '{condicion_IVA}' == '{suj_exen}'
+2025-03-13 00:04:41.464673 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.1 - rpaexcel : setsheet  id: a0dcdc38-089b-b7f2-0ff5-c4cfeb1b09a6 -  - {suj_exen}
+2025-03-13 00:04:41.666845 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_se
+2025-03-13 00:04:41.805868 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.3 - rpasystem : setVar  id: 5836f9e1-05ee-fe06-52c4-09673e4d6a05 -  - {filas_se} + 1
+2025-03-13 00:04:41.990015 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.4 - rpascripts : module  id: 15f7b28a-0378-f8d3-b192-4098d96ad602 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{suj_exen}","cell_range2":"A{filas_se}:N{filas_se}","option":"all"}
+2025-03-13 00:04:42.115117 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.5 - rpasystem : setVar  id: a0958ef8-0eb8-be87-f2bd-bd06167d6b56 -  - {counter} + 1
+2025-03-13 00:04:42.398101 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":5}
+2025-03-13 00:04:42.399332 - rocketbot - INFO - For count: 5
+2025-03-13 00:04:42.517791 - rocketbot - INFO - request: facturacion : line 5 - rpalogic : trycatch  id: 21b01d8f-b000-df75-5935-76a257998fd7 -  - 
+2025-03-13 00:04:42.719589 - rocketbot - INFO - request: facturacion : line 5.1 - rpascripts : module  id: f35fbec0-0d9e-0977-2219-8f8a487a1f81 -  - {"module_name":"AdvancedExcel","module":"deleteSheet","sheet_name":"Planilla de Facturacion","var_":"respuesta"}
+2025-03-13 00:04:42.828373 - rocketbot - INFO - request: facturacion : line 6 - rpalogic : trycatch  id: 37a1b6b1-65f8-0e72-e9d7-2e5c68576985 -  - 
+2025-03-13 00:04:43.109509 - rocketbot - INFO - request: facturacion : line 6.1 - rpaexcel : savexlsx  id: 5104b825-413d-09a1-e404-2c06ed0168fa -  - {path_git}/resources
+2025-03-13 00:04:43.214230 - rocketbot - INFO - request: facturacion : line 6.2 - rpadesktop : alert  id: 540d5afa-4994-cffb-8ca1-efb5fa91305b -  - Archivo guardado correctamente
+2025-03-13 00:04:54.363805 - rocketbot - INFO - request: facturacion : line 6.3 - rpaexcel : quitexcel  id: ee0d5ac2-ee21-8db4-031f-a5b3b0f929a7 -  - 
+2025-03-13 00:04:54.892836 - rocketbot - INFO - request: facturacion : line 6.4 - rpalogic : group  id: cde99195-043c-034c-15ad-0212dcefe382 -  - 
+2025-03-13 00:04:55.158525 - rocketbot - INFO - request: facturacion : line 6.4.1 - rpasystem : setVar  id: b7c3a6ed-f2cf-2281-6ba1-b7e487de6099 -  - %rocketbot_last_status%
+2025-03-13 00:04:55.160595 - system - ERROR - EXCEPTION IN (<string> system, L_253 ""): NameError: name 'true' is not defined
+2025-03-13 00:04:55.217729 - rocketbot - INFO - request: facturacion : line 6.1 - rpasystem : setVar  id: b7c3a6ed-f2cf-2281-6ba1-b7e487de6099 -  - %rocketbot_last_status%
+2025-03-13 00:04:55.482854 - rocketbot - INFO - request: facturacion : line 6.2 - rpafile : savedatafile  id: 7f21b7b1-45ee-a1e2-a68b-b4c3da240ba4 -  - {"file_name":"{path_log}","type":"add","new_line":true,"file_data":"{error}"}
+2025-03-13 00:04:55.604856 - rocketbot - INFO - request: facturacion : line 6.3 - rpasystem : setVar  id: 95365a6a-a631-f5b7-839b-d68228f633f3 -  - datetime.now()
+2025-03-13 00:04:55.823927 - rocketbot - INFO - request: facturacion : line 6.4 - rpafile : savedatafile  id: e999cd7c-e3cf-e8ef-188e-a87ee638c33a -  - {"file_name":"{path_log}","type":"add","new_line":true,"file_data":"'Timestamp error: '{error}"}
+2025-03-13 00:04:55.920097 - rocketbot - INFO - request: facturacion : line 6.5 - rpadesktop : alert  id: d4070afa-0c30-08af-060a-f56d9b0f8f5f -  - El archivo no ha sido guardado, intentelo nuevamente.
+2025-03-13 00:12:02.908467 - rocketbot - INFO - request: facturacion : line 1 - rpalogic : group  id: d4a103af-91eb-53b4-45ea-3e30a52b61c8 -  - 
+2025-03-13 00:12:02.960571 - rocketbot - INFO - request: facturacion : line 1.1 - rpascripts : module  id: 797dffcd-ff36-2b65-6f28-7665b967d31f -  - {"module_name":"killApp","module":"killApp","app_":"Excel"}
+2025-03-13 00:12:03.263939 - rocketbot - INFO - request: facturacion : line 1.2 - rpasystem : setVar  id: 26c3a7c2-a094-0bdb-a87c-23b30acffb56 -  - datetime.now()
+2025-03-13 00:12:03.315979 - rocketbot - INFO - request: facturacion : line 1.3 - rpafile : savedatafile  id: 71fa4eb5-4b9c-8272-f54a-b992c56ad17a -  - {"file_name":"{path_log}","type":"add","new_line":true,"file_data":"{fecha_inicio}"}
+2025-03-13 00:12:03.572946 - rocketbot - INFO - request: facturacion : line 2 - rpalogic : group  id: 3df269a5-7397-ed44-009d-78bb47b9ebb7 -  - 
+2025-03-13 00:12:03.700364 - rocketbot - INFO - request: facturacion : line 2.1 - rpascripts : module  id: e0dbbf0b-6094-af95-b406-a3c648160904 -  - {"module_name":"ControlIni","module":"leerIni","content":"C:/Users/Ignacio/OneDrive/Documents/git-and-github/RobotClase2/main/resources/config_bot2.ini","variable":"{config}"}
+2025-03-13 00:12:03.901462 - rocketbot - INFO - request: facturacion : line 2.2 - rpascripts : module  id: 868321ca-2fbe-9233-8837-73d7127be913 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_git","idvar":"path_git"}
+2025-03-13 00:12:04.025063 - rocketbot - INFO - request: facturacion : line 2.3 - rpascripts : module  id: 2077a0b2-2b6a-bbe4-9bfe-a94e100d71d5 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_log","idvar":"path_log"}
+2025-03-13 00:12:04.228210 - rocketbot - INFO - request: facturacion : line 2.4 - rpascripts : module  id: 5d3b6e14-efcf-56ee-e353-eb1c0af87089 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_archivo","idvar":"path_archivo"}
+2025-03-13 00:12:04.352941 - rocketbot - INFO - request: facturacion : line 2.5 - rpascripts : module  id: 1020d70f-6d9d-6d91-cc38-7d207184a7c9 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"resp_inscr","idvar":"resp_inscr"}
+2025-03-13 00:12:04.556337 - rocketbot - INFO - request: facturacion : line 2.6 - rpascripts : module  id: 27739039-13c0-cab5-b4d5-4671c0c222be -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"resp_mono","idvar":"resp_mono"}
+2025-03-13 00:12:04.680166 - rocketbot - INFO - request: facturacion : line 2.7 - rpascripts : module  id: 6b423d7f-695f-3500-8b08-b4dcdc86c1aa -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"suj_exen","idvar":"suj_exen"}
+2025-03-13 00:12:04.868442 - rocketbot - INFO - request: facturacion : line 3 - rpalogic : group  id: df5cae10-f914-9b03-cc16-24c3df91ed5b -  - 
+2025-03-13 00:12:05.010257 - rocketbot - INFO - request: facturacion : line 3.1 - rpalogic : trycatch  id: a8595513-f577-5d04-ae89-c9a230287598 -  - 
+2025-03-13 00:12:05.180241 - rocketbot - INFO - request: facturacion : line 3.1.1 - rpaexcel : readxlsx  id: cb144be0-4d12-5857-617d-01948ab0d60f -  - {"file_path":"{path_git}/resources/classificacion_clientes.xlsx"}
+2025-03-13 00:12:05.181677 - Rocketbot - ERROR - EXCEPTION IN (<string> Rocketbot, L_192 ""): Exception: File not exists
+2025-03-13 00:12:05.332463 - rocketbot - INFO - request: facturacion : line 3.1.1 - rpaexcel : readxlsx  id: 39ff8897-a471-6150-ea6d-73cfb14fbb4d -  - {"file_path":"{path_archivo}"}
+2025-03-13 00:12:08.055173 - rocketbot - INFO - request: facturacion : line 3.1.2 - rpaexcel : savexlsx  id: be49d7f9-6bbc-456f-81b9-ec29486883a6 -  - {path_git}/resources/clasificacion_clientes.xlsx
+2025-03-13 00:12:08.573371 - rocketbot - INFO - request: facturacion : line 3.1.3 - rpaexcel : quitexcel  id: 573fd24b-3d4e-c8c2-d159-46806bf39a2b -  - 
+2025-03-13 00:12:08.910965 - rocketbot - INFO - request: facturacion : line 3.1.4 - rpaexcel : readxlsx  id: f669e23b-d3e8-6e59-1305-a1055c69fe23 -  - {"file_path":"{path_git}/resources/clasificacion_clientes.xlsx"}
+2025-03-13 00:12:11.940332 - rocketbot - INFO - request: facturacion : line 3.2 - rpalogic : evaluateIf  id: cd017491-7d63-c368-789e-9658fe77a10f -  - {respuesta}
+2025-03-13 00:12:12.204733 - rocketbot - INFO - request: facturacion : line 3.2.1 - rpascripts : module  id: ab46f2a5-bc61-71e9-6b7e-4ea1077022c1 -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{resp_inscr}"}
+2025-03-13 00:12:12.289660 - rocketbot - INFO - request: facturacion : line 3.2.2 - rpascripts : module  id: 144a62b7-7ed6-2015-00e6-5dedd709f6df -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{resp_mono}"}
+2025-03-13 00:12:12.795849 - rocketbot - INFO - request: facturacion : line 3.2.3 - rpascripts : module  id: 4d5531c6-04d9-9866-187d-71c1d051588a -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{suj_exen}"}
+2025-03-13 00:12:13.056558 - rocketbot - INFO - request: facturacion : line 3.3 - rpaexcel : getsheets  id: 6bf490f4-7ed7-f3aa-51b6-735a221420fb -  - sheets
+2025-03-13 00:12:13.181644 - rocketbot - INFO - request: facturacion : line 3.4 - rpasystem : setVar  id: 4f6e0ef8-06da-2948-a5b8-ff5a0cb5f383 -  - {sheets}[1:4]
+2025-03-13 00:12:13.387934 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":0}
+2025-03-13 00:12:13.390091 - rocketbot - INFO - For count: 1
+2025-03-13 00:12:13.508992 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-13 00:12:13.712222 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-13 00:12:13.897571 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":1}
+2025-03-13 00:12:13.899282 - rocketbot - INFO - For count: 2
+2025-03-13 00:12:14.163893 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-13 00:12:14.320124 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-13 00:12:14.770898 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":2}
+2025-03-13 00:12:14.772918 - rocketbot - INFO - For count: 3
+2025-03-13 00:12:15.031039 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-13 00:12:15.122370 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-13 00:12:15.560866 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":3}
+2025-03-13 00:12:15.587917 - rocketbot - INFO - For count: 3
+2025-03-13 00:12:15.830548 - rocketbot - INFO - request: facturacion : line 4 - rpalogic : group  id: 1a452126-dce8-3210-860f-e72ddb9401cc -  - 
+2025-03-13 00:12:15.918661 - rocketbot - INFO - request: facturacion : line 4.1 - rpasystem : setVar  id: 2d822424-091c-ff74-a719-d57a1b7dfaa2 -  - 4
+2025-03-13 00:12:16.150346 - rocketbot - INFO - request: facturacion : line 4.2 - rpaexcel : getrows  id: 9b608f8a-b2a4-8971-16e2-e54614c23c7b -  - filas
+2025-03-13 00:12:16.240519 - rocketbot - INFO - request: facturacion : line 4.3 - rpascripts : module  id: 687a9730-a67d-db4d-fa0f-ba854a41ba01 -  - {"module_name":"AdvancedExcel","module":"countColumns","sheet":"Planilla de Facturacion","var_":"columnas"}
+2025-03-13 00:12:16.493719 - rocketbot - INFO - request: facturacion : line 4.4 - rpascripts : module  id: 24ee1ce3-4816-bc86-8a2f-003a9e6de15f -  - {"module_name":"AdvancedExcel","module":"ReadCells","sheet":"Planilla de Facturacion","range":"A4:N{filas}","var_":"registros"}
+2025-03-13 00:12:16.601031 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":0}
+2025-03-13 00:12:16.603025 - rocketbot - INFO - For count: 1
+2025-03-13 00:12:16.850434 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:12:16.959043 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:12:17.177102 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_inscr}
+2025-03-13 00:12:17.285485 - rocketbot - INFO - request: facturacion : line 4.5.2.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_ri
+2025-03-13 00:12:17.518702 - rocketbot - INFO - request: facturacion : line 4.5.2.3 - rpasystem : setVar  id: e0d5b7c3-2b35-6c46-6f6b-840c0f29f878 -  - {filas_ri} + 1
+2025-03-13 00:12:17.639780 - rocketbot - INFO - request: facturacion : line 4.5.2.4 - rpascripts : module  id: 0c14582b-00a9-be87-adc8-6f7e98760e0e -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_inscr}","cell_range2":"A{filas_ri}:N{filas_ri}","option":"all"}
+2025-03-13 00:12:17.841032 - rocketbot - INFO - request: facturacion : line 4.5.2.5 - rpasystem : setVar  id: a7cfd6a4-ebe8-9c75-6c6b-a1372d48afac -  - {counter} + 1
+2025-03-13 00:12:18.060658 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":1}
+2025-03-13 00:12:18.062651 - rocketbot - INFO - For count: 2
+2025-03-13 00:12:18.169007 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:12:18.392081 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:12:18.510483 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_inscr}
+2025-03-13 00:12:18.714939 - rocketbot - INFO - request: facturacion : line 4.5.2.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_ri
+2025-03-13 00:12:18.838285 - rocketbot - INFO - request: facturacion : line 4.5.2.3 - rpasystem : setVar  id: e0d5b7c3-2b35-6c46-6f6b-840c0f29f878 -  - {filas_ri} + 1
+2025-03-13 00:12:19.043412 - rocketbot - INFO - request: facturacion : line 4.5.2.4 - rpascripts : module  id: 0c14582b-00a9-be87-adc8-6f7e98760e0e -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_inscr}","cell_range2":"A{filas_ri}:N{filas_ri}","option":"all"}
+2025-03-13 00:12:19.166985 - rocketbot - INFO - request: facturacion : line 4.5.2.5 - rpasystem : setVar  id: a7cfd6a4-ebe8-9c75-6c6b-a1372d48afac -  - {counter} + 1
+2025-03-13 00:12:19.468134 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":2}
+2025-03-13 00:12:19.469148 - rocketbot - INFO - For count: 3
+2025-03-13 00:12:19.587305 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:12:19.796776 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:12:19.905154 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-13 00:12:20.120616 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_mono}
+2025-03-13 00:12:20.227372 - rocketbot - INFO - request: facturacion : line 4.5.2.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_rm
+2025-03-13 00:12:20.461432 - rocketbot - INFO - request: facturacion : line 4.5.2.1.3 - rpasystem : setVar  id: 7d638634-f9ad-d36d-ab35-a578b21d6dee -  - {filas_rm} + 1
+2025-03-13 00:12:20.569976 - rocketbot - INFO - request: facturacion : line 4.5.2.1.4 - rpascripts : module  id: da038b90-86c2-ac9f-d1ff-c9d2ad21c64c -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_mono}","cell_range2":"A{filas_rm}:N{filas_rm}","option":"all"}
+2025-03-13 00:12:20.786560 - rocketbot - INFO - request: facturacion : line 4.5.2.1.5 - rpasystem : setVar  id: 4de8c147-c65e-de06-57c7-8f0bc6eb012d -  - {counter} + 1
+2025-03-13 00:12:21.025415 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":3}
+2025-03-13 00:12:21.049649 - rocketbot - INFO - For count: 4
+2025-03-13 00:12:21.145811 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:12:21.382780 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:12:21.474706 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-13 00:12:21.700722 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_mono}
+2025-03-13 00:12:21.786723 - rocketbot - INFO - request: facturacion : line 4.5.2.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_rm
+2025-03-13 00:12:22.033548 - rocketbot - INFO - request: facturacion : line 4.5.2.1.3 - rpasystem : setVar  id: 7d638634-f9ad-d36d-ab35-a578b21d6dee -  - {filas_rm} + 1
+2025-03-13 00:12:22.140462 - rocketbot - INFO - request: facturacion : line 4.5.2.1.4 - rpascripts : module  id: da038b90-86c2-ac9f-d1ff-c9d2ad21c64c -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_mono}","cell_range2":"A{filas_rm}:N{filas_rm}","option":"all"}
+2025-03-13 00:12:22.357611 - rocketbot - INFO - request: facturacion : line 4.5.2.1.5 - rpasystem : setVar  id: 4de8c147-c65e-de06-57c7-8f0bc6eb012d -  - {counter} + 1
+2025-03-13 00:12:22.546962 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":4}
+2025-03-13 00:12:22.547972 - rocketbot - INFO - For count: 5
+2025-03-13 00:12:22.731706 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:12:22.890780 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:12:23.063479 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-13 00:12:23.218092 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpalogic : evaluateIf  id: 6147f3bc-f6cd-e29d-24c6-131090f271b7 -  - '{condicion_IVA}' == '{suj_exen}'
+2025-03-13 00:12:23.387109 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.1 - rpaexcel : setsheet  id: a0dcdc38-089b-b7f2-0ff5-c4cfeb1b09a6 -  - {suj_exen}
+2025-03-13 00:12:23.538721 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_se
+2025-03-13 00:12:23.729679 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.3 - rpasystem : setVar  id: 5836f9e1-05ee-fe06-52c4-09673e4d6a05 -  - {filas_se} + 1
+2025-03-13 00:12:23.864474 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.4 - rpascripts : module  id: 15f7b28a-0378-f8d3-b192-4098d96ad602 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{suj_exen}","cell_range2":"A{filas_se}:N{filas_se}","option":"all"}
+2025-03-13 00:12:24.051109 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.5 - rpasystem : setVar  id: a0958ef8-0eb8-be87-f2bd-bd06167d6b56 -  - {counter} + 1
+2025-03-13 00:12:24.257255 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":5}
+2025-03-13 00:12:24.259275 - rocketbot - INFO - For count: 5
+2025-03-13 00:12:24.375076 - rocketbot - INFO - request: facturacion : line 5 - rpalogic : trycatch  id: 21b01d8f-b000-df75-5935-76a257998fd7 -  - 
+2025-03-13 00:12:24.579613 - rocketbot - INFO - request: facturacion : line 5.1 - rpascripts : module  id: f35fbec0-0d9e-0977-2219-8f8a487a1f81 -  - {"module_name":"AdvancedExcel","module":"deleteSheet","sheet_name":"Planilla de Facturacion","var_":"respuesta"}
+2025-03-13 00:12:24.685571 - rocketbot - INFO - request: facturacion : line 6 - rpalogic : trycatch  id: 37a1b6b1-65f8-0e72-e9d7-2e5c68576985 -  - 
+2025-03-13 00:12:24.963309 - rocketbot - INFO - request: facturacion : line 6.1 - rpasystem : setVar  id: 3fb0025c-5ac1-d7a4-6cac-542073883212 -  - datetime.now()
+2025-03-13 00:12:25.068991 - rocketbot - INFO - request: facturacion : line 6.2 - rpafile : savedatafile  id: 6ea7183c-b6cb-1958-a4c6-1640ce57e45c -  - {"file_name":"{path_log}","type":"add","new_line":true,"file_data":"{fecha_fin]"}
+2025-03-13 00:12:25.290734 - rocketbot - INFO - request: facturacion : line 6.3 - rpaexcel : savexlsx  id: 5104b825-413d-09a1-e404-2c06ed0168fa -  - {path_git}/resources
+2025-03-13 00:12:25.445066 - rocketbot - INFO - request: facturacion : line 6.4 - rpadesktop : alert  id: 540d5afa-4994-cffb-8ca1-efb5fa91305b -  - Archivo guardado correctamente
+2025-03-13 00:14:12.462568 - rocketbot - INFO - request: facturacion : line 6.5 - rpaexcel : quitexcel  id: ee0d5ac2-ee21-8db4-031f-a5b3b0f929a7 -  - 
+2025-03-13 00:14:12.724751 - rocketbot - INFO - request: facturacion : line 6.6 - rpasystem : setVar  id: b7c3a6ed-f2cf-2281-6ba1-b7e487de6099 -  - %rocketbot_last_status%
+2025-03-13 00:14:12.725955 - system - ERROR - EXCEPTION IN (<string> system, L_253 ""): NameError: name 'false' is not defined
+2025-03-13 00:14:13.003121 - rocketbot - INFO - request: facturacion : line 6.1 - rpasystem : setVar  id: b7c3a6ed-f2cf-2281-6ba1-b7e487de6099 -  - %rocketbot_last_status%
+2025-03-13 00:14:13.297578 - rocketbot - INFO - request: facturacion : line 6.2 - rpafile : savedatafile  id: 7f21b7b1-45ee-a1e2-a68b-b4c3da240ba4 -  - {"file_name":"{path_log}","type":"add","new_line":true,"file_data":"{error}"}
+2025-03-13 00:14:13.489639 - rocketbot - INFO - request: facturacion : line 6.3 - rpasystem : setVar  id: 95365a6a-a631-f5b7-839b-d68228f633f3 -  - datetime.now()
+2025-03-13 00:14:13.829255 - rocketbot - INFO - request: facturacion : line 6.4 - rpafile : savedatafile  id: e999cd7c-e3cf-e8ef-188e-a87ee638c33a -  - {"file_name":"{path_log}","type":"add","new_line":true,"file_data":"'Timestamp error: '{fecha_fin}"}
+2025-03-13 00:14:14.095127 - rocketbot - INFO - request: facturacion : line 6.5 - rpadesktop : alert  id: d4070afa-0c30-08af-060a-f56d9b0f8f5f -  - El archivo no ha sido guardado, intentelo nuevamente.
+2025-03-13 00:17:34.621330 - rocketbot - INFO - request: facturacion : line 1 - rpalogic : group  id: d4a103af-91eb-53b4-45ea-3e30a52b61c8 -  - 
+2025-03-13 00:17:34.696560 - rocketbot - INFO - request: facturacion : line 1.1 - rpascripts : module  id: 797dffcd-ff36-2b65-6f28-7665b967d31f -  - {"module_name":"killApp","module":"killApp","app_":"Excel"}
+2025-03-13 00:17:34.944756 - rocketbot - INFO - request: facturacion : line 1.2 - rpasystem : setVar  id: 26c3a7c2-a094-0bdb-a87c-23b30acffb56 -  - datetime.now()
+2025-03-13 00:17:35.022032 - rocketbot - INFO - request: facturacion : line 1.3 - rpafile : savedatafile  id: 71fa4eb5-4b9c-8272-f54a-b992c56ad17a -  - {"file_name":"{path_log}","type":"add","new_line":true,"file_data":"Inicio proceso: {fecha_inicio}"}
+2025-03-13 00:17:35.265782 - rocketbot - INFO - request: facturacion : line 2 - rpalogic : group  id: 3df269a5-7397-ed44-009d-78bb47b9ebb7 -  - 
+2025-03-13 00:17:35.405503 - rocketbot - INFO - request: facturacion : line 2.1 - rpascripts : module  id: e0dbbf0b-6094-af95-b406-a3c648160904 -  - {"module_name":"ControlIni","module":"leerIni","content":"C:/Users/Ignacio/OneDrive/Documents/git-and-github/RobotClase2/main/resources/config_bot2.ini","variable":"{config}"}
+2025-03-13 00:17:35.592421 - rocketbot - INFO - request: facturacion : line 2.2 - rpascripts : module  id: 868321ca-2fbe-9233-8837-73d7127be913 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_git","idvar":"path_git"}
+2025-03-13 00:17:35.727618 - rocketbot - INFO - request: facturacion : line 2.3 - rpascripts : module  id: 2077a0b2-2b6a-bbe4-9bfe-a94e100d71d5 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_log","idvar":"path_log"}
+2025-03-13 00:17:35.918462 - rocketbot - INFO - request: facturacion : line 2.4 - rpascripts : module  id: 5d3b6e14-efcf-56ee-e353-eb1c0af87089 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"paths","iddato":"path_archivo","idvar":"path_archivo"}
+2025-03-13 00:17:36.039756 - rocketbot - INFO - request: facturacion : line 2.5 - rpascripts : module  id: 1020d70f-6d9d-6d91-cc38-7d207184a7c9 -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"resp_inscr","idvar":"resp_inscr"}
+2025-03-13 00:17:36.240240 - rocketbot - INFO - request: facturacion : line 2.6 - rpascripts : module  id: 27739039-13c0-cab5-b4d5-4671c0c222be -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"resp_mono","idvar":"resp_mono"}
+2025-03-13 00:17:36.365084 - rocketbot - INFO - request: facturacion : line 2.7 - rpascripts : module  id: 6b423d7f-695f-3500-8b08-b4dcdc86c1aa -  - {"module_name":"ControlIni","module":"obtenerDato","idseccion":"clasificacion_clientes","iddato":"suj_exen","idvar":"suj_exen"}
+2025-03-13 00:17:36.553486 - rocketbot - INFO - request: facturacion : line 3 - rpalogic : group  id: df5cae10-f914-9b03-cc16-24c3df91ed5b -  - 
+2025-03-13 00:17:36.692331 - rocketbot - INFO - request: facturacion : line 3.1 - rpalogic : trycatch  id: a8595513-f577-5d04-ae89-c9a230287598 -  - 
+2025-03-13 00:17:36.877964 - rocketbot - INFO - request: facturacion : line 3.1.1 - rpaexcel : readxlsx  id: cb144be0-4d12-5857-617d-01948ab0d60f -  - {"file_path":"{path_git}/resources/classificacion_clientes.xlsx"}
+2025-03-13 00:17:36.879697 - Rocketbot - ERROR - EXCEPTION IN (<string> Rocketbot, L_192 ""): Exception: File not exists
+2025-03-13 00:17:37.017435 - rocketbot - INFO - request: facturacion : line 3.1.1 - rpaexcel : readxlsx  id: 39ff8897-a471-6150-ea6d-73cfb14fbb4d -  - {"file_path":"{path_archivo}"}
+2025-03-13 00:17:39.663738 - rocketbot - INFO - request: facturacion : line 3.1.2 - rpaexcel : savexlsx  id: be49d7f9-6bbc-456f-81b9-ec29486883a6 -  - {path_git}/resources/clasificacion_clientes.xlsx
+2025-03-13 00:17:40.125118 - rocketbot - INFO - request: facturacion : line 3.1.3 - rpaexcel : quitexcel  id: 573fd24b-3d4e-c8c2-d159-46806bf39a2b -  - 
+2025-03-13 00:17:40.466433 - rocketbot - INFO - request: facturacion : line 3.1.4 - rpaexcel : readxlsx  id: f669e23b-d3e8-6e59-1305-a1055c69fe23 -  - {"file_path":"{path_git}/resources/clasificacion_clientes.xlsx"}
+2025-03-13 00:17:43.376394 - rocketbot - INFO - request: facturacion : line 3.2 - rpalogic : evaluateIf  id: cd017491-7d63-c368-789e-9658fe77a10f -  - {respuesta}
+2025-03-13 00:17:43.633909 - rocketbot - INFO - request: facturacion : line 3.2.1 - rpascripts : module  id: ab46f2a5-bc61-71e9-6b7e-4ea1077022c1 -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{resp_inscr}"}
+2025-03-13 00:17:43.724870 - rocketbot - INFO - request: facturacion : line 3.2.2 - rpascripts : module  id: 144a62b7-7ed6-2015-00e6-5dedd709f6df -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{resp_mono}"}
+2025-03-13 00:17:44.182068 - rocketbot - INFO - request: facturacion : line 3.2.3 - rpascripts : module  id: 4d5531c6-04d9-9866-187d-71c1d051588a -  - {"module_name":"AdvancedExcel","module":"createSheet","sheet_name":"{suj_exen}"}
+2025-03-13 00:17:44.429784 - rocketbot - INFO - request: facturacion : line 3.3 - rpaexcel : getsheets  id: 6bf490f4-7ed7-f3aa-51b6-735a221420fb -  - sheets
+2025-03-13 00:17:44.570758 - rocketbot - INFO - request: facturacion : line 3.4 - rpasystem : setVar  id: 4f6e0ef8-06da-2948-a5b8-ff5a0cb5f383 -  - {sheets}[1:4]
+2025-03-13 00:17:44.757128 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":0}
+2025-03-13 00:17:44.759292 - rocketbot - INFO - For count: 1
+2025-03-13 00:17:44.897280 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-13 00:17:45.082647 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-13 00:17:45.299350 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":1}
+2025-03-13 00:17:45.301742 - rocketbot - INFO - For count: 2
+2025-03-13 00:17:45.491977 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-13 00:17:45.614755 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-13 00:17:45.896441 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":2}
+2025-03-13 00:17:45.898028 - rocketbot - INFO - For count: 3
+2025-03-13 00:17:46.035548 - rocketbot - INFO - request: facturacion : line 3.5.1 - rpascripts : module  id: a0f5834a-7a40-5103-4a8f-91ec5d09b75f -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"column_widths"}
+2025-03-13 00:17:46.219325 - rocketbot - INFO - request: facturacion : line 3.5.2 - rpascripts : module  id: 6a06b10d-434f-5d67-1b15-7e39219eba26 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A1:N3","sheet_name2":"{current_sheet}","cell_range2":"A1:N3","option":"all"}
+2025-03-13 00:17:46.437988 - rocketbot - INFO - request: facturacion : line 3.5 - rpalogic : for  id: 21049b29-dc10-9c09-e271-a40abccebe93 -  - {"iterable":"{sheets}","count":3}
+2025-03-13 00:17:46.439101 - rocketbot - INFO - For count: 3
+2025-03-13 00:17:46.646975 - rocketbot - INFO - request: facturacion : line 4 - rpalogic : group  id: 1a452126-dce8-3210-860f-e72ddb9401cc -  - 
+2025-03-13 00:17:46.768812 - rocketbot - INFO - request: facturacion : line 4.1 - rpasystem : setVar  id: 2d822424-091c-ff74-a719-d57a1b7dfaa2 -  - 4
+2025-03-13 00:17:46.972794 - rocketbot - INFO - request: facturacion : line 4.2 - rpaexcel : getrows  id: 9b608f8a-b2a4-8971-16e2-e54614c23c7b -  - filas
+2025-03-13 00:17:47.094304 - rocketbot - INFO - request: facturacion : line 4.3 - rpascripts : module  id: 687a9730-a67d-db4d-fa0f-ba854a41ba01 -  - {"module_name":"AdvancedExcel","module":"countColumns","sheet":"Planilla de Facturacion","var_":"columnas"}
+2025-03-13 00:17:47.298038 - rocketbot - INFO - request: facturacion : line 4.4 - rpascripts : module  id: 24ee1ce3-4816-bc86-8a2f-003a9e6de15f -  - {"module_name":"AdvancedExcel","module":"ReadCells","sheet":"Planilla de Facturacion","range":"A4:N{filas}","var_":"registros"}
+2025-03-13 00:17:47.439185 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":0}
+2025-03-13 00:17:47.440288 - rocketbot - INFO - For count: 1
+2025-03-13 00:17:47.658268 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:17:47.764948 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:17:47.985211 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_inscr}
+2025-03-13 00:17:48.105062 - rocketbot - INFO - request: facturacion : line 4.5.2.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_ri
+2025-03-13 00:17:48.310964 - rocketbot - INFO - request: facturacion : line 4.5.2.3 - rpasystem : setVar  id: e0d5b7c3-2b35-6c46-6f6b-840c0f29f878 -  - {filas_ri} + 1
+2025-03-13 00:17:48.433207 - rocketbot - INFO - request: facturacion : line 4.5.2.4 - rpascripts : module  id: 0c14582b-00a9-be87-adc8-6f7e98760e0e -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_inscr}","cell_range2":"A{filas_ri}:N{filas_ri}","option":"all"}
+2025-03-13 00:17:48.636717 - rocketbot - INFO - request: facturacion : line 4.5.2.5 - rpasystem : setVar  id: a7cfd6a4-ebe8-9c75-6c6b-a1372d48afac -  - {counter} + 1
+2025-03-13 00:17:48.826847 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":1}
+2025-03-13 00:17:48.827935 - rocketbot - INFO - For count: 2
+2025-03-13 00:17:48.965389 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:17:49.174750 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:17:49.280640 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_inscr}
+2025-03-13 00:17:49.495159 - rocketbot - INFO - request: facturacion : line 4.5.2.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_ri
+2025-03-13 00:17:49.618521 - rocketbot - INFO - request: facturacion : line 4.5.2.3 - rpasystem : setVar  id: e0d5b7c3-2b35-6c46-6f6b-840c0f29f878 -  - {filas_ri} + 1
+2025-03-13 00:17:49.838597 - rocketbot - INFO - request: facturacion : line 4.5.2.4 - rpascripts : module  id: 0c14582b-00a9-be87-adc8-6f7e98760e0e -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_inscr}","cell_range2":"A{filas_ri}:N{filas_ri}","option":"all"}
+2025-03-13 00:17:49.950855 - rocketbot - INFO - request: facturacion : line 4.5.2.5 - rpasystem : setVar  id: a7cfd6a4-ebe8-9c75-6c6b-a1372d48afac -  - {counter} + 1
+2025-03-13 00:17:50.385468 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":2}
+2025-03-13 00:17:50.387850 - rocketbot - INFO - For count: 3
+2025-03-13 00:17:50.644755 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:17:50.706391 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:17:50.973909 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-13 00:17:51.095581 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_mono}
+2025-03-13 00:17:51.299144 - rocketbot - INFO - request: facturacion : line 4.5.2.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_rm
+2025-03-13 00:17:51.439077 - rocketbot - INFO - request: facturacion : line 4.5.2.1.3 - rpasystem : setVar  id: 7d638634-f9ad-d36d-ab35-a578b21d6dee -  - {filas_rm} + 1
+2025-03-13 00:17:51.629792 - rocketbot - INFO - request: facturacion : line 4.5.2.1.4 - rpascripts : module  id: da038b90-86c2-ac9f-d1ff-c9d2ad21c64c -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_mono}","cell_range2":"A{filas_rm}:N{filas_rm}","option":"all"}
+2025-03-13 00:17:51.752014 - rocketbot - INFO - request: facturacion : line 4.5.2.1.5 - rpasystem : setVar  id: 4de8c147-c65e-de06-57c7-8f0bc6eb012d -  - {counter} + 1
+2025-03-13 00:17:52.031880 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":3}
+2025-03-13 00:17:52.033875 - rocketbot - INFO - For count: 4
+2025-03-13 00:17:52.154641 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:17:52.362225 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:17:52.485381 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-13 00:17:52.685777 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpaexcel : setsheet  id: 8f0d47da-d59a-a6ff-253f-3b27a7581d75 -  - {resp_mono}
+2025-03-13 00:17:52.806218 - rocketbot - INFO - request: facturacion : line 4.5.2.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_rm
+2025-03-13 00:17:53.026541 - rocketbot - INFO - request: facturacion : line 4.5.2.1.3 - rpasystem : setVar  id: 7d638634-f9ad-d36d-ab35-a578b21d6dee -  - {filas_rm} + 1
+2025-03-13 00:17:53.146785 - rocketbot - INFO - request: facturacion : line 4.5.2.1.4 - rpascripts : module  id: da038b90-86c2-ac9f-d1ff-c9d2ad21c64c -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{resp_mono}","cell_range2":"A{filas_rm}:N{filas_rm}","option":"all"}
+2025-03-13 00:17:53.347799 - rocketbot - INFO - request: facturacion : line 4.5.2.1.5 - rpasystem : setVar  id: 4de8c147-c65e-de06-57c7-8f0bc6eb012d -  - {counter} + 1
+2025-03-13 00:17:53.601172 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":4}
+2025-03-13 00:17:53.657536 - rocketbot - INFO - For count: 5
+2025-03-13 00:17:53.721313 - rocketbot - INFO - request: facturacion : line 4.5.1 - rpadatatransform : getElement  id: a7906393-326f-8b7a-23af-224b7d20ba3c -  - {"array_":"{registro}","position_":"1","var_":"condicion_IVA"}
+2025-03-13 00:17:53.991942 - rocketbot - INFO - request: facturacion : line 4.5.2 - rpalogic : evaluateIf  id: 0add6cec-fab6-ac6e-3b47-d5cf1c015291 -  - '{condicion_IVA}' == '{resp_inscr}'
+2025-03-13 00:17:54.098099 - rocketbot - INFO - request: facturacion : line 4.5.2.1 - rpalogic : evaluateIf  id: 847791c6-1ed5-50f4-8d5b-d64509421816 -  - '{condicion_IVA}' == '{resp_mono}'
+2025-03-13 00:17:54.314431 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1 - rpalogic : evaluateIf  id: 6147f3bc-f6cd-e29d-24c6-131090f271b7 -  - '{condicion_IVA}' == '{suj_exen}'
+2025-03-13 00:17:54.422688 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.1 - rpaexcel : setsheet  id: a0dcdc38-089b-b7f2-0ff5-c4cfeb1b09a6 -  - {suj_exen}
+2025-03-13 00:17:54.640284 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.2 - rpaexcel : getrows  id: d53cbede-e03a-912e-fcff-0343c8a85c9e -  - filas_se
+2025-03-13 00:17:54.762826 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.3 - rpasystem : setVar  id: 5836f9e1-05ee-fe06-52c4-09673e4d6a05 -  - {filas_se} + 1
+2025-03-13 00:17:54.969422 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.4 - rpascripts : module  id: 15f7b28a-0378-f8d3-b192-4098d96ad602 -  - {"module_name":"AdvancedExcel","module":"copyPaste","sheet_name1":"Planilla de Facturacion","cell_range1":"A{counter}:N{counter}","sheet_name2":"{suj_exen}","cell_range2":"A{filas_se}:N{filas_se}","option":"all"}
+2025-03-13 00:17:55.089294 - rocketbot - INFO - request: facturacion : line 4.5.2.1.1.5 - rpasystem : setVar  id: a0958ef8-0eb8-be87-f2bd-bd06167d6b56 -  - {counter} + 1
+2025-03-13 00:17:55.376068 - rocketbot - INFO - request: facturacion : line 4.5 - rpalogic : for  id: a39aae23-fccf-dc49-06e9-97215daeba07 -  - {"iterable":"{registros}","count":5}
+2025-03-13 00:17:55.378192 - rocketbot - INFO - For count: 5
+2025-03-13 00:17:55.494715 - rocketbot - INFO - request: facturacion : line 5 - rpalogic : trycatch  id: 21b01d8f-b000-df75-5935-76a257998fd7 -  - 
+2025-03-13 00:17:55.696442 - rocketbot - INFO - request: facturacion : line 5.1 - rpascripts : module  id: f35fbec0-0d9e-0977-2219-8f8a487a1f81 -  - {"module_name":"AdvancedExcel","module":"deleteSheet","sheet_name":"Planilla de Facturacion","var_":"respuesta"}
+2025-03-13 00:17:55.804533 - rocketbot - INFO - request: facturacion : line 6 - rpalogic : trycatch  id: 37a1b6b1-65f8-0e72-e9d7-2e5c68576985 -  - 
+2025-03-13 00:17:56.071663 - rocketbot - INFO - request: facturacion : line 6.1 - rpaexcel : savexlsx  id: 5104b825-413d-09a1-e404-2c06ed0168fa -  - {path_git}/resources
+2025-03-13 00:17:56.178980 - rocketbot - INFO - request: facturacion : line 6.2 - rpadesktop : alert  id: 540d5afa-4994-cffb-8ca1-efb5fa91305b -  - Archivo guardado correctamente
+2025-03-13 00:18:13.216113 - rocketbot - INFO - request: facturacion : line 6.3 - rpaexcel : quitexcel  id: ee0d5ac2-ee21-8db4-031f-a5b3b0f929a7 -  - 
+2025-03-13 00:18:13.946956 - rocketbot - INFO - request: facturacion : line 6.4 - rpasystem : setVar  id: 95365a6a-a631-f5b7-839b-d68228f633f3 -  - datetime.now()
+2025-03-13 00:18:14.205514 - rocketbot - INFO - request: facturacion : line 6.5 - rpafile : savedatafile  id: 714bd1f1-ce76-2f0e-f333-1f29eab0e829 -  - {"file_name":"{path_log}","type":"add","new_line":true,"file_data":"Fin proceso: {fecha_fin}"}
